@@ -20,13 +20,29 @@ def get_linear_schedule_with_warmup(optimizer, num_warmup_steps, num_total_steps
     return torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
 
+def rotate_checkpoints(checkpoint_dir: Path, keep_last_n: int = 4):
+    """
+    Deletes older checkpoints, keeping only the most recent `keep_last_n`.
+    Keeps storage bounded on long runs regardless of total step count -
+    important on a fixed-size network volume (e.g. 50GB).
+    """
+    checkpoints = sorted(
+        checkpoint_dir.glob("checkpoint_step_*.pt"),
+        key=lambda p: int(p.stem.split("_")[-1])
+    )
+    if len(checkpoints) > keep_last_n:
+        for old_ckpt in checkpoints[:-keep_last_n]:
+            old_ckpt.unlink()
+            print(f"  Removed old checkpoint (rotation): {old_ckpt.name}")
+
+
 def train(total_steps: int = 20000, batch_size: int = 16, seq_len: int = 1024,
           learning_rate: float = 3e-4, warmup_steps: int = 1000,
           checkpoint_dir: str = "checkpoints", log_interval: int = 50,
           val_interval: int = 1000, sample_interval: int = 2000,
           device: str = "cpu", vocab_size: int = 50257,
           dim: int = 768, num_heads: int = 12, num_layers: int = 12,
-          resume_from: str = None):
+          resume_from: str = None, keep_last_n_checkpoints: int = 4):
 
     checkpoint_dir = Path(checkpoint_dir)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
@@ -42,6 +58,7 @@ def train(total_steps: int = 20000, batch_size: int = 16, seq_len: int = 1024,
     print(f"Learning rate: {learning_rate} | Warmup: {warmup_steps}")
     print(f"Total steps (target): {total_steps}")
     print(f"Checkpoint dir: {checkpoint_dir}")
+    print(f"Checkpoint rotation: keeping last {keep_last_n_checkpoints}")
     if resume_from:
         print(f"Resuming from: {resume_from}")
     print("=" * 60 + "\n")
@@ -135,6 +152,7 @@ def train(total_steps: int = 20000, batch_size: int = 16, seq_len: int = 1024,
             torch.save({"step": step, "model_state": model.state_dict(),
                         "optimizer_state": optimizer.state_dict()}, checkpoint_path)
             print(f"  Checkpoint saved: {checkpoint_path}\n")
+            rotate_checkpoints(checkpoint_dir, keep_last_n=keep_last_n_checkpoints)
 
     elapsed = time.time() - start_time
     print("\n" + "=" * 60)
@@ -163,6 +181,7 @@ if __name__ == "__main__":
     parser.add_argument("--dim", type=int, default=768)
     parser.add_argument("--num-heads", type=int, default=12)
     parser.add_argument("--num-layers", type=int, default=12)
+    parser.add_argument("--keep-last-n-checkpoints", type=int, default=4)
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
 
     args = parser.parse_args()
@@ -170,4 +189,4 @@ if __name__ == "__main__":
     train(total_steps=args.total_steps, batch_size=args.batch_size, seq_len=args.seq_len,
           learning_rate=args.lr, warmup_steps=args.warmup_steps, checkpoint_dir=args.checkpoint_dir,
           device=args.device, dim=args.dim, num_heads=args.num_heads, num_layers=args.num_layers,
-          resume_from=args.resume_from)
+          resume_from=args.resume_from, keep_last_n_checkpoints=args.keep_last_n_checkpoints)
