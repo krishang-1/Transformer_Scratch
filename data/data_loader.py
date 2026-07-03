@@ -16,7 +16,10 @@ class WikiTextDataset(IterableDataset):
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
         print(f"Loading WikiText-103 ({split} split)...")
-        self.dataset = load_dataset("wikitext", "wikitext-103-v1", split=split, streaming=True)
+        # NOTE: HF deprecated legacy script-based loading for canonical
+        # dataset names like "wikitext" - migrated to the Salesforce
+        # namespace mirror. Config name also changed to "-raw-v1".
+        self.dataset = load_dataset("Salesforce/wikitext", "wikitext-103-raw-v1", split=split, streaming=True)
 
         self.buffer_size = seq_len * 100
 
