@@ -1,0 +1,12 @@
+gitignore_content = """checkpoints/
+logs/
+__pycache__/
+*.pyc
+.cache/
+kernels/*.o
+kernels/*.so
+build/
+"""
+
+with open(".gitignore", "w") as f:
+    f.write(gitignore_content)
