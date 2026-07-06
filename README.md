@@ -100,38 +100,6 @@ This repository, its structure, and this README.
 
 ---
 
-## Repository Structure
-
-transformer_scratch/
-├── modules/                    # Phase 1 components + Phase 2 composition
-│   ├── embedding.py
-│   ├── positional.py           # RoPE
-│   ├── attention.py            # PyTorch reference attention
-│   ├── attention_cuda.py       # CUDA kernel wrapper (Phase 4)
-│   ├── rmsnorm.py
-│   ├── swiglu.py
-│   ├── output_projection.py
-│   ├── transformer_block.py
-│   └── transformer_model.py
-├── kernels/
-│   └── attention_cuda.cu       # Hand-derived forward + backward CUDA kernels
-├── tests/                      # Phase 1-4 verification gates
-├── data/
-│   └── data_loader.py          # WikiText-103 streaming + tokenization
-├── run_phase1_gates.py
-├── run_phase2_gates.py
-├── run_phase3_gates.py
-├── train.py                    # Step-bounded training loop w/ resume support
-├── evaluate_final_model.py     # Final accuracy/perplexity/repetition evaluation
-├── benchmark_attention.py      # PyTorch vs. CUDA kernel speed comparison
-├── diagnose_bottleneck.py      # CPU vs GPU throughput diagnostic
-├── plot_training_curve.py      # Reconstructs training curve from logs
-├── training_log.txt            # Full training run log (123M model)
-├── training_curve_123M_wikitext.png
-└── requirements.txt
-
----
-
 ## Reproducing This Project
 
 ```bash
