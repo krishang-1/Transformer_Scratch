@@ -1,0 +1,1190 @@
+============================================================
+PHASE 3: TRAIN TO CONVERGENCE (123M config, step-bounded)
+============================================================
+Device: cuda
+Batch size: 8 | Seq len: 1024
+Architecture: dim=768, heads=12, layers=12
+Learning rate: 0.0003 | Warmup: 1000
+Total steps (target): 36621
+Checkpoint dir: /workspace/checkpoints
+Checkpoint rotation: keeping last 4
+============================================================
+
+Creating model...
+Model parameters: 123,551,232 (123.6M)
+
+Creating dataloaders...
+Creating WikiText-103 dataloaders...
+Loading WikiText-103 (train split)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading WikiText-103 (validation split)...
+Dataloaders ready
+
+============================================================
+TRAINING (36621 steps remaining, target step 36621)
+============================================================
+
+  Step     50/36621 | Loss: 9.5698 | Avg: 10.3901 | LR: 1.50e-05 | 1.09 steps/sec
+  Step    100/36621 | Loss: 8.5995 | Avg: 9.0675 | LR: 3.00e-05 | 1.11 steps/sec
+  Step    150/36621 | Loss: 7.4513 | Avg: 8.1064 | LR: 4.50e-05 | 1.12 steps/sec
+  Step    200/36621 | Loss: 7.4326 | Avg: 7.4128 | LR: 6.00e-05 | 1.12 steps/sec
+  Step    250/36621 | Loss: 6.9555 | Avg: 7.0643 | LR: 7.50e-05 | 1.13 steps/sec
+  Step    300/36621 | Loss: 6.6173 | Avg: 6.9005 | LR: 9.00e-05 | 1.13 steps/sec
+  Step    350/36621 | Loss: 6.6119 | Avg: 6.7204 | LR: 1.05e-04 | 1.13 steps/sec
+  Step    400/36621 | Loss: 6.5475 | Avg: 6.5757 | LR: 1.20e-04 | 1.13 steps/sec
+  Step    450/36621 | Loss: 6.7061 | Avg: 6.4347 | LR: 1.35e-04 | 1.13 steps/sec
+  Step    500/36621 | Loss: 6.0159 | Avg: 6.3491 | LR: 1.50e-04 | 1.13 steps/sec
+  Step    550/36621 | Loss: 6.1548 | Avg: 6.2016 | LR: 1.65e-04 | 1.13 steps/sec
+  Step    600/36621 | Loss: 6.1222 | Avg: 6.1562 | LR: 1.80e-04 | 1.13 steps/sec
+  Step    650/36621 | Loss: 5.9412 | Avg: 6.0894 | LR: 1.95e-04 | 1.13 steps/sec
+  Step    700/36621 | Loss: 6.0147 | Avg: 6.0265 | LR: 2.10e-04 | 1.13 steps/sec
+  Step    750/36621 | Loss: 5.8681 | Avg: 5.9491 | LR: 2.25e-04 | 1.13 steps/sec
+  Step    800/36621 | Loss: 5.6989 | Avg: 5.8686 | LR: 2.40e-04 | 1.13 steps/sec
+  Step    850/36621 | Loss: 5.4969 | Avg: 5.8170 | LR: 2.55e-04 | 1.13 steps/sec
+  Step    900/36621 | Loss: 5.7157 | Avg: 5.7844 | LR: 2.70e-04 | 1.13 steps/sec
+  Step    950/36621 | Loss: 6.1245 | Avg: 5.7234 | LR: 2.85e-04 | 1.13 steps/sec
+  Step   1000/36621 | Loss: 5.9656 | Avg: 5.6967 | LR: 3.00e-04 | 1.13 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 277.78
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_1000.pt
+
+  Step   1050/36621 | Loss: 5.3519 | Avg: 5.6430 | LR: 3.00e-04 | 1.12 steps/sec
+  Step   1100/36621 | Loss: 5.4908 | Avg: 5.6553 | LR: 2.99e-04 | 1.12 steps/sec
+  Step   1150/36621 | Loss: 5.0990 | Avg: 5.5655 | LR: 2.99e-04 | 1.12 steps/sec
+  Step   1200/36621 | Loss: 5.7652 | Avg: 5.4908 | LR: 2.98e-04 | 1.12 steps/sec
+  Step   1250/36621 | Loss: 5.3593 | Avg: 5.4288 | LR: 2.98e-04 | 1.12 steps/sec
+  Step   1300/36621 | Loss: 5.2160 | Avg: 5.4246 | LR: 2.97e-04 | 1.12 steps/sec
+  Step   1350/36621 | Loss: 5.6046 | Avg: 5.4339 | LR: 2.97e-04 | 1.12 steps/sec
+  Step   1400/36621 | Loss: 5.1889 | Avg: 5.3960 | LR: 2.97e-04 | 1.12 steps/sec
+  Step   1450/36621 | Loss: 5.2629 | Avg: 5.3146 | LR: 2.96e-04 | 1.12 steps/sec
+  Step   1500/36621 | Loss: 5.0655 | Avg: 5.2949 | LR: 2.96e-04 | 1.12 steps/sec
+  Step   1550/36621 | Loss: 5.5912 | Avg: 5.3059 | LR: 2.95e-04 | 1.12 steps/sec
+  Step   1600/36621 | Loss: 5.3274 | Avg: 5.2418 | LR: 2.95e-04 | 1.12 steps/sec
+  Step   1650/36621 | Loss: 4.9626 | Avg: 5.1904 | LR: 2.95e-04 | 1.12 steps/sec
+  Step   1700/36621 | Loss: 5.0931 | Avg: 5.1799 | LR: 2.94e-04 | 1.12 steps/sec
+  Step   1750/36621 | Loss: 5.2175 | Avg: 5.1610 | LR: 2.94e-04 | 1.12 steps/sec
+  Step   1800/36621 | Loss: 5.0432 | Avg: 5.1471 | LR: 2.93e-04 | 1.12 steps/sec
+  Step   1850/36621 | Loss: 5.0742 | Avg: 5.0595 | LR: 2.93e-04 | 1.12 steps/sec
+  Step   1900/36621 | Loss: 4.8294 | Avg: 5.0657 | LR: 2.92e-04 | 1.12 steps/sec
+  Step   1950/36621 | Loss: 5.3008 | Avg: 5.0271 | LR: 2.92e-04 | 1.12 steps/sec
+  Step   2000/36621 | Loss: 4.7989 | Avg: 4.9556 | LR: 2.92e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 134.49
+
+
+  Generating samples...
+
+  [Sample 1]  in the 1950s , a group of more than 40 @,@ 000 pieces were sold in the 1950s , with numerous of the most important elements from the twentieth century each year , and the first largest in total to se...
+
+  [Sample 2]  , the company 's game 's official music was given to the project 's final appearance , with the exception of numerous of the game 's " original " solo music album , including the first piece of the g...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_2000.pt
+
+  Step   2050/36621 | Loss: 4.5919 | Avg: 4.9945 | LR: 2.91e-04 | 1.11 steps/sec
+  Step   2100/36621 | Loss: 4.8241 | Avg: 4.8873 | LR: 2.91e-04 | 1.11 steps/sec
+  Step   2150/36621 | Loss: 4.5679 | Avg: 5.0100 | LR: 2.90e-04 | 1.11 steps/sec
+  Step   2200/36621 | Loss: 4.8617 | Avg: 4.8528 | LR: 2.90e-04 | 1.11 steps/sec
+  Step   2250/36621 | Loss: 5.0945 | Avg: 4.9092 | LR: 2.89e-04 | 1.11 steps/sec
+  Step   2300/36621 | Loss: 4.7206 | Avg: 4.8942 | LR: 2.89e-04 | 1.11 steps/sec
+  Step   2350/36621 | Loss: 4.9547 | Avg: 4.8925 | LR: 2.89e-04 | 1.11 steps/sec
+  Step   2400/36621 | Loss: 5.1533 | Avg: 4.8020 | LR: 2.88e-04 | 1.11 steps/sec
+  Step   2450/36621 | Loss: 4.9543 | Avg: 4.7928 | LR: 2.88e-04 | 1.11 steps/sec
+  Step   2500/36621 | Loss: 5.3944 | Avg: 4.8366 | LR: 2.87e-04 | 1.11 steps/sec
+  Step   2550/36621 | Loss: 4.8253 | Avg: 4.7295 | LR: 2.87e-04 | 1.11 steps/sec
+  Step   2600/36621 | Loss: 4.2297 | Avg: 4.7413 | LR: 2.87e-04 | 1.11 steps/sec
+  Step   2650/36621 | Loss: 4.7649 | Avg: 4.7216 | LR: 2.86e-04 | 1.11 steps/sec
+  Step   2700/36621 | Loss: 4.8578 | Avg: 4.7492 | LR: 2.86e-04 | 1.11 steps/sec
+  Step   2750/36621 | Loss: 4.4243 | Avg: 4.6823 | LR: 2.85e-04 | 1.12 steps/sec
+  Step   2800/36621 | Loss: 4.7470 | Avg: 4.6174 | LR: 2.85e-04 | 1.12 steps/sec
+  Step   2850/36621 | Loss: 4.9923 | Avg: 4.6904 | LR: 2.84e-04 | 1.12 steps/sec
+  Step   2900/36621 | Loss: 4.5070 | Avg: 4.5500 | LR: 2.84e-04 | 1.12 steps/sec
+  Step   2950/36621 | Loss: 4.6922 | Avg: 4.5858 | LR: 2.84e-04 | 1.12 steps/sec
+  Step   3000/36621 | Loss: 4.6925 | Avg: 4.5266 | LR: 2.83e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 89.32
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_3000.pt
+
+  Step   3050/36621 | Loss: 4.2371 | Avg: 4.5560 | LR: 2.83e-04 | 1.11 steps/sec
+  Step   3100/36621 | Loss: 4.7553 | Avg: 4.5825 | LR: 2.82e-04 | 1.11 steps/sec
+  Step   3150/36621 | Loss: 4.2408 | Avg: 4.4761 | LR: 2.82e-04 | 1.11 steps/sec
+  Step   3200/36621 | Loss: 4.8713 | Avg: 4.5206 | LR: 2.81e-04 | 1.11 steps/sec
+  Step   3250/36621 | Loss: 4.6178 | Avg: 4.4932 | LR: 2.81e-04 | 1.11 steps/sec
+  Step   3300/36621 | Loss: 4.6041 | Avg: 4.5560 | LR: 2.81e-04 | 1.11 steps/sec
+  Step   3350/36621 | Loss: 4.3233 | Avg: 4.4791 | LR: 2.80e-04 | 1.11 steps/sec
+  Step   3400/36621 | Loss: 4.1326 | Avg: 4.3488 | LR: 2.80e-04 | 1.11 steps/sec
+  Step   3450/36621 | Loss: 4.1314 | Avg: 4.4340 | LR: 2.79e-04 | 1.11 steps/sec
+  Step   3500/36621 | Loss: 4.3401 | Avg: 4.3843 | LR: 2.79e-04 | 1.11 steps/sec
+  Step   3550/36621 | Loss: 4.3026 | Avg: 4.3794 | LR: 2.79e-04 | 1.11 steps/sec
+  Step   3600/36621 | Loss: 4.4029 | Avg: 4.3735 | LR: 2.78e-04 | 1.11 steps/sec
+  Step   3650/36621 | Loss: 4.3889 | Avg: 4.3185 | LR: 2.78e-04 | 1.11 steps/sec
+  Step   3700/36621 | Loss: 4.0957 | Avg: 4.3080 | LR: 2.77e-04 | 1.11 steps/sec
+  Step   3750/36621 | Loss: 4.1237 | Avg: 4.2916 | LR: 2.77e-04 | 1.11 steps/sec
+  Step   3800/36621 | Loss: 4.4725 | Avg: 4.3188 | LR: 2.76e-04 | 1.11 steps/sec
+  Step   3850/36621 | Loss: 4.4499 | Avg: 4.2897 | LR: 2.76e-04 | 1.11 steps/sec
+  Step   3900/36621 | Loss: 4.2045 | Avg: 4.2697 | LR: 2.76e-04 | 1.11 steps/sec
+  Step   3950/36621 | Loss: 4.6394 | Avg: 4.2474 | LR: 2.75e-04 | 1.11 steps/sec
+  Step   4000/36621 | Loss: 4.2984 | Avg: 4.1834 | LR: 2.75e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 62.53
+
+
+  Generating samples...
+
+  [Sample 1]  , who was the only one to be able to enter the world in the United States , and by the United States , they went through a brief tour of Europe . In the summer of 1931 , the group moved to Europe whe...
+
+  [Sample 2]  with the impression that the company was going on , and that they would be a " great deal " . He then added that he had " not ever seen the company as a whole for his fans , and a bit of the game he ...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_4000.pt
+
+  Step   4050/36621 | Loss: 4.7346 | Avg: 4.2493 | LR: 2.74e-04 | 1.11 steps/sec
+  Step   4100/36621 | Loss: 4.6137 | Avg: 4.3534 | LR: 2.74e-04 | 1.11 steps/sec
+  Step   4150/36621 | Loss: 4.1270 | Avg: 4.1835 | LR: 2.73e-04 | 1.11 steps/sec
+  Step   4200/36621 | Loss: 3.9389 | Avg: 4.2682 | LR: 2.73e-04 | 1.11 steps/sec
+  Step   4250/36621 | Loss: 4.7744 | Avg: 4.2958 | LR: 2.73e-04 | 1.11 steps/sec
+  Step   4300/36621 | Loss: 4.1496 | Avg: 4.2169 | LR: 2.72e-04 | 1.11 steps/sec
+  Step   4350/36621 | Loss: 3.9746 | Avg: 4.2296 | LR: 2.72e-04 | 1.11 steps/sec
+  Step   4400/36621 | Loss: 4.6128 | Avg: 4.2060 | LR: 2.71e-04 | 1.11 steps/sec
+  Step   4450/36621 | Loss: 4.0954 | Avg: 4.1751 | LR: 2.71e-04 | 1.11 steps/sec
+  Step   4500/36621 | Loss: 3.7716 | Avg: 4.1836 | LR: 2.71e-04 | 1.11 steps/sec
+  Step   4550/36621 | Loss: 3.9366 | Avg: 4.2010 | LR: 2.70e-04 | 1.11 steps/sec
+  Step   4600/36621 | Loss: 4.2443 | Avg: 4.1753 | LR: 2.70e-04 | 1.11 steps/sec
+  Step   4650/36621 | Loss: 4.3529 | Avg: 4.0968 | LR: 2.69e-04 | 1.11 steps/sec
+  Step   4700/36621 | Loss: 4.3098 | Avg: 4.1437 | LR: 2.69e-04 | 1.11 steps/sec
+  Step   4750/36621 | Loss: 4.4110 | Avg: 4.1378 | LR: 2.68e-04 | 1.11 steps/sec
+  Step   4800/36621 | Loss: 4.2342 | Avg: 4.0676 | LR: 2.68e-04 | 1.11 steps/sec
+  Step   4850/36621 | Loss: 4.2600 | Avg: 4.1184 | LR: 2.68e-04 | 1.11 steps/sec
+  Step   4900/36621 | Loss: 4.5055 | Avg: 4.1200 | LR: 2.67e-04 | 1.11 steps/sec
+  Step   4950/36621 | Loss: 4.0526 | Avg: 4.0922 | LR: 2.67e-04 | 1.11 steps/sec
+  Step   5000/36621 | Loss: 4.4297 | Avg: 4.1425 | LR: 2.66e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 54.40
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_5000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_1000.pt
+  Step   5050/36621 | Loss: 4.4413 | Avg: 4.0728 | LR: 2.66e-04 | 1.11 steps/sec
+  Step   5100/36621 | Loss: 4.1557 | Avg: 4.0778 | LR: 2.65e-04 | 1.11 steps/sec
+  Step   5150/36621 | Loss: 4.1597 | Avg: 4.1609 | LR: 2.65e-04 | 1.11 steps/sec
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1063 > 1024). Running this sequence through the model will result in indexing errors
+  Step   5200/36621 | Loss: 4.0968 | Avg: 4.0226 | LR: 2.65e-04 | 1.11 steps/sec
+  Step   5250/36621 | Loss: 4.0563 | Avg: 4.0490 | LR: 2.64e-04 | 1.11 steps/sec
+  Step   5300/36621 | Loss: 3.7087 | Avg: 4.0044 | LR: 2.64e-04 | 1.11 steps/sec
+  Step   5350/36621 | Loss: 4.2367 | Avg: 3.9968 | LR: 2.63e-04 | 1.11 steps/sec
+  Step   5400/36621 | Loss: 3.7637 | Avg: 4.0465 | LR: 2.63e-04 | 1.11 steps/sec
+  Step   5450/36621 | Loss: 3.8772 | Avg: 3.9643 | LR: 2.63e-04 | 1.11 steps/sec
+  Step   5500/36621 | Loss: 3.3833 | Avg: 4.0157 | LR: 2.62e-04 | 1.11 steps/sec
+  Step   5550/36621 | Loss: 3.6969 | Avg: 3.9685 | LR: 2.62e-04 | 1.11 steps/sec
+  Step   5600/36621 | Loss: 3.9730 | Avg: 3.9956 | LR: 2.61e-04 | 1.11 steps/sec
+  Step   5650/36621 | Loss: 4.5722 | Avg: 4.0156 | LR: 2.61e-04 | 1.11 steps/sec
+  Step   5700/36621 | Loss: 3.8061 | Avg: 4.0079 | LR: 2.60e-04 | 1.11 steps/sec
+  Step   5750/36621 | Loss: 4.0695 | Avg: 3.9151 | LR: 2.60e-04 | 1.11 steps/sec
+  Step   5800/36621 | Loss: 4.2039 | Avg: 3.9239 | LR: 2.60e-04 | 1.11 steps/sec
+  Step   5850/36621 | Loss: 4.1108 | Avg: 3.9763 | LR: 2.59e-04 | 1.11 steps/sec
+  Step   5900/36621 | Loss: 3.6793 | Avg: 4.0259 | LR: 2.59e-04 | 1.11 steps/sec
+  Step   5950/36621 | Loss: 3.8587 | Avg: 3.9811 | LR: 2.58e-04 | 1.11 steps/sec
+  Step   6000/36621 | Loss: 4.0373 | Avg: 3.9257 | LR: 2.58e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 45.72
+
+
+  Generating samples...
+
+  [Sample 1]  to the extent that they were a good choice . But as the idea for the British and English policy was to be used in the British market by the British and British government , that British colonial soci...
+
+  [Sample 2]  to the throne of the King in the north , he was the only member of the royal army in the history of the Emperor . He was able to move the rebellion toward the throne of the King himself . He then ret...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_6000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_2000.pt
+  Step   6050/36621 | Loss: 3.8057 | Avg: 3.9655 | LR: 2.57e-04 | 1.11 steps/sec
+  Step   6100/36621 | Loss: 3.3154 | Avg: 3.9801 | LR: 2.57e-04 | 1.11 steps/sec
+  Step   6150/36621 | Loss: 3.3195 | Avg: 4.0122 | LR: 2.57e-04 | 1.11 steps/sec
+  Step   6200/36621 | Loss: 3.9170 | Avg: 3.8788 | LR: 2.56e-04 | 1.11 steps/sec
+  Step   6250/36621 | Loss: 3.8290 | Avg: 4.0041 | LR: 2.56e-04 | 1.11 steps/sec
+  Step   6300/36621 | Loss: 3.5410 | Avg: 3.8988 | LR: 2.55e-04 | 1.11 steps/sec
+  Step   6350/36621 | Loss: 4.2610 | Avg: 3.8649 | LR: 2.55e-04 | 1.11 steps/sec
+  Step   6400/36621 | Loss: 3.6539 | Avg: 3.7971 | LR: 2.55e-04 | 1.11 steps/sec
+  Step   6450/36621 | Loss: 4.1321 | Avg: 3.9470 | LR: 2.54e-04 | 1.11 steps/sec
+  Step   6500/36621 | Loss: 4.3316 | Avg: 3.8719 | LR: 2.54e-04 | 1.11 steps/sec
+  Step   6550/36621 | Loss: 4.2740 | Avg: 3.9307 | LR: 2.53e-04 | 1.11 steps/sec
+  Step   6600/36621 | Loss: 3.2594 | Avg: 3.8655 | LR: 2.53e-04 | 1.11 steps/sec
+  Step   6650/36621 | Loss: 3.5702 | Avg: 3.8949 | LR: 2.52e-04 | 1.11 steps/sec
+  Step   6700/36621 | Loss: 4.2144 | Avg: 3.9149 | LR: 2.52e-04 | 1.11 steps/sec
+  Step   6750/36621 | Loss: 3.8322 | Avg: 3.9595 | LR: 2.52e-04 | 1.11 steps/sec
+  Step   6800/36621 | Loss: 3.8406 | Avg: 3.8327 | LR: 2.51e-04 | 1.11 steps/sec
+  Step   6850/36621 | Loss: 3.6175 | Avg: 3.8735 | LR: 2.51e-04 | 1.11 steps/sec
+  Step   6900/36621 | Loss: 4.3642 | Avg: 3.8088 | LR: 2.50e-04 | 1.11 steps/sec
+  Step   6950/36621 | Loss: 3.7601 | Avg: 3.8802 | LR: 2.50e-04 | 1.11 steps/sec
+  Step   7000/36621 | Loss: 3.8820 | Avg: 3.8014 | LR: 2.49e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 42.24
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_7000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_3000.pt
+  Step   7050/36621 | Loss: 4.0671 | Avg: 3.8416 | LR: 2.49e-04 | 1.11 steps/sec
+  Step   7100/36621 | Loss: 3.7755 | Avg: 3.8442 | LR: 2.49e-04 | 1.11 steps/sec
+  Step   7150/36621 | Loss: 4.2763 | Avg: 3.8693 | LR: 2.48e-04 | 1.11 steps/sec
+  Step   7200/36621 | Loss: 4.0870 | Avg: 3.8757 | LR: 2.48e-04 | 1.11 steps/sec
+  Step   7250/36621 | Loss: 3.4431 | Avg: 3.8059 | LR: 2.47e-04 | 1.11 steps/sec
+  Step   7300/36621 | Loss: 3.9671 | Avg: 3.8982 | LR: 2.47e-04 | 1.11 steps/sec
+  Step   7350/36621 | Loss: 3.8482 | Avg: 3.8926 | LR: 2.47e-04 | 1.11 steps/sec
+  Step   7400/36621 | Loss: 3.8569 | Avg: 3.7265 | LR: 2.46e-04 | 1.11 steps/sec
+  Step   7450/36621 | Loss: 3.2136 | Avg: 3.9011 | LR: 2.46e-04 | 1.11 steps/sec
+  Step   7500/36621 | Loss: 4.0035 | Avg: 3.7592 | LR: 2.45e-04 | 1.11 steps/sec
+  Step   7550/36621 | Loss: 3.9890 | Avg: 3.7955 | LR: 2.45e-04 | 1.11 steps/sec
+  Step   7600/36621 | Loss: 3.6700 | Avg: 3.7821 | LR: 2.44e-04 | 1.11 steps/sec
+  Step   7650/36621 | Loss: 3.4542 | Avg: 3.7259 | LR: 2.44e-04 | 1.11 steps/sec
+  Step   7700/36621 | Loss: 3.9020 | Avg: 3.8372 | LR: 2.44e-04 | 1.11 steps/sec
+  Step   7750/36621 | Loss: 3.5723 | Avg: 3.7626 | LR: 2.43e-04 | 1.11 steps/sec
+  Step   7800/36621 | Loss: 3.7430 | Avg: 3.7504 | LR: 2.43e-04 | 1.11 steps/sec
+  Step   7850/36621 | Loss: 3.3741 | Avg: 3.6678 | LR: 2.42e-04 | 1.11 steps/sec
+  Step   7900/36621 | Loss: 3.6814 | Avg: 3.7384 | LR: 2.42e-04 | 1.11 steps/sec
+  Step   7950/36621 | Loss: 3.7109 | Avg: 3.7793 | LR: 2.41e-04 | 1.11 steps/sec
+  Step   8000/36621 | Loss: 3.6506 | Avg: 3.7988 | LR: 2.41e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 39.06
+
+
+  Generating samples...
+
+  [Sample 1]  , who were willing to see how to write new ones . The film was also produced by Robert C. Moore , who did not want to work on the film for a while , but was dissatisfied with the film 's production ....
+
+  [Sample 2]  , and the crew of the cast were also involved in the production . The crew of the Enterprise crew was taken over by the crew of Enterprise , who then landed on screen . 
+ = = = Production = = = 
+ Cas...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_8000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_4000.pt
+  Step   8050/36621 | Loss: 4.0924 | Avg: 3.6610 | LR: 2.41e-04 | 1.11 steps/sec
+  Step   8100/36621 | Loss: 3.9691 | Avg: 3.7516 | LR: 2.40e-04 | 1.11 steps/sec
+  Step   8150/36621 | Loss: 3.8204 | Avg: 3.7716 | LR: 2.40e-04 | 1.11 steps/sec
+  Step   8200/36621 | Loss: 3.4379 | Avg: 3.7325 | LR: 2.39e-04 | 1.11 steps/sec
+  Step   8250/36621 | Loss: 3.5485 | Avg: 3.7566 | LR: 2.39e-04 | 1.11 steps/sec
+  Step   8300/36621 | Loss: 3.9325 | Avg: 3.7591 | LR: 2.39e-04 | 1.11 steps/sec
+  Step   8350/36621 | Loss: 3.6312 | Avg: 3.7116 | LR: 2.38e-04 | 1.11 steps/sec
+  Step   8400/36621 | Loss: 3.2467 | Avg: 3.7635 | LR: 2.38e-04 | 1.11 steps/sec
+  Step   8450/36621 | Loss: 4.1516 | Avg: 3.7969 | LR: 2.37e-04 | 1.11 steps/sec
+  Step   8500/36621 | Loss: 3.9157 | Avg: 3.7285 | LR: 2.37e-04 | 1.11 steps/sec
+  Step   8550/36621 | Loss: 3.9725 | Avg: 3.7320 | LR: 2.36e-04 | 1.11 steps/sec
+  Step   8600/36621 | Loss: 4.2543 | Avg: 3.6790 | LR: 2.36e-04 | 1.11 steps/sec
+  Step   8650/36621 | Loss: 4.1267 | Avg: 3.7231 | LR: 2.36e-04 | 1.11 steps/sec
+  Step   8700/36621 | Loss: 3.9272 | Avg: 3.7716 | LR: 2.35e-04 | 1.11 steps/sec
+  Step   8750/36621 | Loss: 3.6395 | Avg: 3.8255 | LR: 2.35e-04 | 1.11 steps/sec
+  Step   8800/36621 | Loss: 3.9616 | Avg: 3.7006 | LR: 2.34e-04 | 1.11 steps/sec
+  Step   8850/36621 | Loss: 4.3107 | Avg: 3.7078 | LR: 2.34e-04 | 1.11 steps/sec
+  Step   8900/36621 | Loss: 4.0514 | Avg: 3.7903 | LR: 2.33e-04 | 1.11 steps/sec
+  Step   8950/36621 | Loss: 3.3514 | Avg: 3.7337 | LR: 2.33e-04 | 1.11 steps/sec
+  Step   9000/36621 | Loss: 4.0355 | Avg: 3.7571 | LR: 2.33e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 37.38
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_9000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_5000.pt
+  Step   9050/36621 | Loss: 3.9602 | Avg: 3.7489 | LR: 2.32e-04 | 1.11 steps/sec
+  Step   9100/36621 | Loss: 3.4251 | Avg: 3.7025 | LR: 2.32e-04 | 1.11 steps/sec
+  Step   9150/36621 | Loss: 3.7045 | Avg: 3.7885 | LR: 2.31e-04 | 1.11 steps/sec
+  Step   9200/36621 | Loss: 3.9748 | Avg: 3.7976 | LR: 2.31e-04 | 1.11 steps/sec
+  Step   9250/36621 | Loss: 3.5574 | Avg: 3.7278 | LR: 2.31e-04 | 1.11 steps/sec
+  Step   9300/36621 | Loss: 3.7170 | Avg: 3.6610 | LR: 2.30e-04 | 1.11 steps/sec
+  Step   9350/36621 | Loss: 3.6857 | Avg: 3.7043 | LR: 2.30e-04 | 1.11 steps/sec
+  Step   9400/36621 | Loss: 4.1387 | Avg: 3.7257 | LR: 2.29e-04 | 1.11 steps/sec
+  Step   9450/36621 | Loss: 2.9673 | Avg: 3.6674 | LR: 2.29e-04 | 1.11 steps/sec
+  Step   9500/36621 | Loss: 3.8970 | Avg: 3.7443 | LR: 2.28e-04 | 1.11 steps/sec
+  Step   9550/36621 | Loss: 3.4108 | Avg: 3.6979 | LR: 2.28e-04 | 1.11 steps/sec
+  Step   9600/36621 | Loss: 3.6018 | Avg: 3.7443 | LR: 2.28e-04 | 1.11 steps/sec
+  Step   9650/36621 | Loss: 3.8043 | Avg: 3.6716 | LR: 2.27e-04 | 1.11 steps/sec
+  Step   9700/36621 | Loss: 3.1883 | Avg: 3.6957 | LR: 2.27e-04 | 1.11 steps/sec
+  Step   9750/36621 | Loss: 3.6592 | Avg: 3.6106 | LR: 2.26e-04 | 1.11 steps/sec
+  Step   9800/36621 | Loss: 3.5114 | Avg: 3.7008 | LR: 2.26e-04 | 1.11 steps/sec
+  Step   9850/36621 | Loss: 3.6017 | Avg: 3.6597 | LR: 2.25e-04 | 1.11 steps/sec
+  Step   9900/36621 | Loss: 3.9002 | Avg: 3.6594 | LR: 2.25e-04 | 1.11 steps/sec
+  Step   9950/36621 | Loss: 3.5661 | Avg: 3.6258 | LR: 2.25e-04 | 1.11 steps/sec
+  Step  10000/36621 | Loss: 2.9426 | Avg: 3.5660 | LR: 2.24e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 34.46
+
+
+  Generating samples...
+
+  [Sample 1]  is a game game . The game begins with a number of changes to the game , including changes to the game and the creation of a new game . 
+ The game is described by many reviewers as the worst series of...
+
+  [Sample 2]  , and , although it did not become one of the most successful and costly films of the period , it was the most successful American version of the film . The film was the first film to be shot in the ...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_10000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_6000.pt
+  Step  10050/36621 | Loss: 3.8702 | Avg: 3.6279 | LR: 2.24e-04 | 1.11 steps/sec
+  Step  10100/36621 | Loss: 3.4779 | Avg: 3.6802 | LR: 2.23e-04 | 1.11 steps/sec
+  Step  10150/36621 | Loss: 3.0583 | Avg: 3.7286 | LR: 2.23e-04 | 1.11 steps/sec
+  Step  10200/36621 | Loss: 3.7375 | Avg: 3.5834 | LR: 2.23e-04 | 1.11 steps/sec
+  Step  10250/36621 | Loss: 3.7988 | Avg: 3.6187 | LR: 2.22e-04 | 1.11 steps/sec
+  Step  10300/36621 | Loss: 3.8689 | Avg: 3.6321 | LR: 2.22e-04 | 1.11 steps/sec
+  Step  10350/36621 | Loss: 3.3263 | Avg: 3.6154 | LR: 2.21e-04 | 1.11 steps/sec
+  Step  10400/36621 | Loss: 3.4466 | Avg: 3.6853 | LR: 2.21e-04 | 1.11 steps/sec
+  Step  10450/36621 | Loss: 3.5529 | Avg: 3.6957 | LR: 2.20e-04 | 1.11 steps/sec
+  Step  10500/36621 | Loss: 3.9309 | Avg: 3.5791 | LR: 2.20e-04 | 1.11 steps/sec
+  Step  10550/36621 | Loss: 3.6453 | Avg: 3.6057 | LR: 2.20e-04 | 1.11 steps/sec
+  Step  10600/36621 | Loss: 3.5104 | Avg: 3.6105 | LR: 2.19e-04 | 1.11 steps/sec
+  Step  10650/36621 | Loss: 3.6374 | Avg: 3.5994 | LR: 2.19e-04 | 1.11 steps/sec
+  Step  10700/36621 | Loss: 3.9635 | Avg: 3.6690 | LR: 2.18e-04 | 1.11 steps/sec
+  Step  10750/36621 | Loss: 3.0461 | Avg: 3.6097 | LR: 2.18e-04 | 1.11 steps/sec
+  Step  10800/36621 | Loss: 3.4517 | Avg: 3.6276 | LR: 2.17e-04 | 1.11 steps/sec
+  Step  10850/36621 | Loss: 3.5176 | Avg: 3.6058 | LR: 2.17e-04 | 1.11 steps/sec
+  Step  10900/36621 | Loss: 3.7730 | Avg: 3.6521 | LR: 2.17e-04 | 1.11 steps/sec
+  Step  10950/36621 | Loss: 3.5764 | Avg: 3.6186 | LR: 2.16e-04 | 1.11 steps/sec
+  Step  11000/36621 | Loss: 3.8532 | Avg: 3.6711 | LR: 2.16e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 33.04
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_11000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_7000.pt
+  Step  11050/36621 | Loss: 3.7785 | Avg: 3.6194 | LR: 2.15e-04 | 1.11 steps/sec
+  Step  11100/36621 | Loss: 3.7941 | Avg: 3.5689 | LR: 2.15e-04 | 1.11 steps/sec
+  Step  11150/36621 | Loss: 3.9139 | Avg: 3.5322 | LR: 2.15e-04 | 1.11 steps/sec
+  Step  11200/36621 | Loss: 3.3982 | Avg: 3.6216 | LR: 2.14e-04 | 1.11 steps/sec
+  Step  11250/36621 | Loss: 3.7681 | Avg: 3.6131 | LR: 2.14e-04 | 1.11 steps/sec
+  Step  11300/36621 | Loss: 3.6022 | Avg: 3.5658 | LR: 2.13e-04 | 1.11 steps/sec
+  Step  11350/36621 | Loss: 3.6725 | Avg: 3.5925 | LR: 2.13e-04 | 1.11 steps/sec
+  Step  11400/36621 | Loss: 3.8139 | Avg: 3.5993 | LR: 2.12e-04 | 1.11 steps/sec
+  Step  11450/36621 | Loss: 3.8121 | Avg: 3.6537 | LR: 2.12e-04 | 1.11 steps/sec
+  Step  11500/36621 | Loss: 3.5930 | Avg: 3.5225 | LR: 2.12e-04 | 1.11 steps/sec
+  Step  11550/36621 | Loss: 3.5915 | Avg: 3.5893 | LR: 2.11e-04 | 1.11 steps/sec
+  Step  11600/36621 | Loss: 3.6943 | Avg: 3.6019 | LR: 2.11e-04 | 1.11 steps/sec
+  Step  11650/36621 | Loss: 3.0827 | Avg: 3.5223 | LR: 2.10e-04 | 1.11 steps/sec
+  Step  11700/36621 | Loss: 3.1143 | Avg: 3.4948 | LR: 2.10e-04 | 1.11 steps/sec
+  Step  11750/36621 | Loss: 3.2390 | Avg: 3.5976 | LR: 2.09e-04 | 1.11 steps/sec
+  Step  11800/36621 | Loss: 3.1666 | Avg: 3.5243 | LR: 2.09e-04 | 1.11 steps/sec
+  Step  11850/36621 | Loss: 3.9356 | Avg: 3.6365 | LR: 2.09e-04 | 1.11 steps/sec
+  Step  11900/36621 | Loss: 3.2919 | Avg: 3.5355 | LR: 2.08e-04 | 1.11 steps/sec
+  Step  11950/36621 | Loss: 3.3020 | Avg: 3.4882 | LR: 2.08e-04 | 1.11 steps/sec
+  Step  12000/36621 | Loss: 3.8981 | Avg: 3.5277 | LR: 2.07e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 31.88
+
+
+  Generating samples...
+
+  [Sample 1]  : 
+ a d 'Asezièvère ( i.e. , that ) ; 
+ " a d 'Asezièvère " ( i.e. , not a d 'Asezièvère ) ; 
+ " The d 'Asezièvère " ( i.e. , that ) ; 
+ " The d 'Asezièvère " ( i.e. , that ) ; 
+ " The...
+
+  [Sample 2]  for her " , her " breathlessly " attitude , and her " breathless " manner . 
+ = = Composition = = 
+ = = = Development = = = 
+ Musically , Musically , Musically is the first album with a hip hop , hip...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_12000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_8000.pt
+  Step  12050/36621 | Loss: 4.1140 | Avg: 3.6436 | LR: 2.07e-04 | 1.11 steps/sec
+  Step  12100/36621 | Loss: 3.7890 | Avg: 3.6622 | LR: 2.07e-04 | 1.11 steps/sec
+  Step  12150/36621 | Loss: 3.5327 | Avg: 3.6183 | LR: 2.06e-04 | 1.11 steps/sec
+  Step  12200/36621 | Loss: 3.3597 | Avg: 3.5634 | LR: 2.06e-04 | 1.11 steps/sec
+  Step  12250/36621 | Loss: 2.9687 | Avg: 3.5998 | LR: 2.05e-04 | 1.11 steps/sec
+  Step  12300/36621 | Loss: 3.2734 | Avg: 3.4925 | LR: 2.05e-04 | 1.11 steps/sec
+  Step  12350/36621 | Loss: 3.8718 | Avg: 3.5635 | LR: 2.04e-04 | 1.11 steps/sec
+  Step  12400/36621 | Loss: 3.6629 | Avg: 3.5517 | LR: 2.04e-04 | 1.11 steps/sec
+  Step  12450/36621 | Loss: 3.3939 | Avg: 3.5165 | LR: 2.04e-04 | 1.11 steps/sec
+  Step  12500/36621 | Loss: 3.5307 | Avg: 3.6117 | LR: 2.03e-04 | 1.11 steps/sec
+  Step  12550/36621 | Loss: 3.8037 | Avg: 3.5617 | LR: 2.03e-04 | 1.11 steps/sec
+  Step  12600/36621 | Loss: 3.5621 | Avg: 3.5768 | LR: 2.02e-04 | 1.11 steps/sec
+  Step  12650/36621 | Loss: 2.9254 | Avg: 3.5311 | LR: 2.02e-04 | 1.11 steps/sec
+  Step  12700/36621 | Loss: 3.3856 | Avg: 3.5584 | LR: 2.01e-04 | 1.11 steps/sec
+  Step  12750/36621 | Loss: 3.4862 | Avg: 3.5763 | LR: 2.01e-04 | 1.11 steps/sec
+  Step  12800/36621 | Loss: 3.4090 | Avg: 3.5056 | LR: 2.01e-04 | 1.11 steps/sec
+  Step  12850/36621 | Loss: 3.4563 | Avg: 3.5215 | LR: 2.00e-04 | 1.11 steps/sec
+  Step  12900/36621 | Loss: 3.7737 | Avg: 3.5340 | LR: 2.00e-04 | 1.11 steps/sec
+  Step  12950/36621 | Loss: 3.5643 | Avg: 3.5281 | LR: 1.99e-04 | 1.11 steps/sec
+  Step  13000/36621 | Loss: 3.8559 | Avg: 3.5736 | LR: 1.99e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 31.05
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_13000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_9000.pt
+  Step  13050/36621 | Loss: 3.3436 | Avg: 3.6065 | LR: 1.99e-04 | 1.11 steps/sec
+  Step  13100/36621 | Loss: 3.6221 | Avg: 3.4826 | LR: 1.98e-04 | 1.11 steps/sec
+  Step  13150/36621 | Loss: 3.5852 | Avg: 3.5105 | LR: 1.98e-04 | 1.11 steps/sec
+  Step  13200/36621 | Loss: 3.3368 | Avg: 3.6255 | LR: 1.97e-04 | 1.11 steps/sec
+  Step  13250/36621 | Loss: 3.3999 | Avg: 3.5391 | LR: 1.97e-04 | 1.11 steps/sec
+  Step  13300/36621 | Loss: 3.8574 | Avg: 3.5664 | LR: 1.96e-04 | 1.11 steps/sec
+  Step  13350/36621 | Loss: 3.7075 | Avg: 3.5724 | LR: 1.96e-04 | 1.11 steps/sec
+  Step  13400/36621 | Loss: 3.5089 | Avg: 3.5531 | LR: 1.96e-04 | 1.11 steps/sec
+  Step  13450/36621 | Loss: 3.2931 | Avg: 3.5419 | LR: 1.95e-04 | 1.11 steps/sec
+  Step  13500/36621 | Loss: 3.3680 | Avg: 3.5775 | LR: 1.95e-04 | 1.11 steps/sec
+  Step  13550/36621 | Loss: 3.5483 | Avg: 3.4432 | LR: 1.94e-04 | 1.11 steps/sec
+  Step  13600/36621 | Loss: 3.4118 | Avg: 3.5234 | LR: 1.94e-04 | 1.11 steps/sec
+  Step  13650/36621 | Loss: 3.5860 | Avg: 3.4616 | LR: 1.93e-04 | 1.11 steps/sec
+  Step  13700/36621 | Loss: 2.9780 | Avg: 3.5257 | LR: 1.93e-04 | 1.11 steps/sec
+  Step  13750/36621 | Loss: 3.3847 | Avg: 3.4753 | LR: 1.93e-04 | 1.11 steps/sec
+  Step  13800/36621 | Loss: 3.2918 | Avg: 3.4769 | LR: 1.92e-04 | 1.11 steps/sec
+  Step  13850/36621 | Loss: 3.1034 | Avg: 3.4735 | LR: 1.92e-04 | 1.11 steps/sec
+  Step  13900/36621 | Loss: 3.3490 | Avg: 3.4174 | LR: 1.91e-04 | 1.11 steps/sec
+  Step  13950/36621 | Loss: 3.5360 | Avg: 3.4208 | LR: 1.91e-04 | 1.11 steps/sec
+  Step  14000/36621 | Loss: 3.7120 | Avg: 3.5447 | LR: 1.91e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 29.87
+
+
+  Generating samples...
+
+  [Sample 1]  in the sense that the game continues to be an entertaining game that has only been a regular fixture in the game . 
+ = = = Music = = = 
+ The game has seen a number of music critics see it as the best...
+
+  [Sample 2]  of the building , as the building was a simple building with a small , tall entrance designed by the architect and artist Paul R. Kud . For the exterior of the building , the tower was covered by thr...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_14000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_10000.pt
+  Step  14050/36621 | Loss: 3.2533 | Avg: 3.4786 | LR: 1.90e-04 | 1.11 steps/sec
+  Step  14100/36621 | Loss: 3.8544 | Avg: 3.3984 | LR: 1.90e-04 | 1.11 steps/sec
+  Step  14150/36621 | Loss: 3.3787 | Avg: 3.5179 | LR: 1.89e-04 | 1.11 steps/sec
+  Step  14200/36621 | Loss: 3.7847 | Avg: 3.5389 | LR: 1.89e-04 | 1.11 steps/sec
+  Step  14250/36621 | Loss: 3.2878 | Avg: 3.5337 | LR: 1.88e-04 | 1.11 steps/sec
+  Step  14300/36621 | Loss: 2.9888 | Avg: 3.3981 | LR: 1.88e-04 | 1.11 steps/sec
+  Step  14350/36621 | Loss: 3.1206 | Avg: 3.5038 | LR: 1.88e-04 | 1.11 steps/sec
+  Step  14400/36621 | Loss: 3.7632 | Avg: 3.5212 | LR: 1.87e-04 | 1.11 steps/sec
+  Step  14450/36621 | Loss: 3.3347 | Avg: 3.5239 | LR: 1.87e-04 | 1.11 steps/sec
+  Step  14500/36621 | Loss: 3.5100 | Avg: 3.4133 | LR: 1.86e-04 | 1.11 steps/sec
+  Step  14550/36621 | Loss: 3.7658 | Avg: 3.4459 | LR: 1.86e-04 | 1.11 steps/sec
+  Step  14600/36621 | Loss: 3.2013 | Avg: 3.4193 | LR: 1.85e-04 | 1.11 steps/sec
+  Step  14650/36621 | Loss: 3.3785 | Avg: 3.5192 | LR: 1.85e-04 | 1.11 steps/sec
+  Step  14700/36621 | Loss: 3.6578 | Avg: 3.5462 | LR: 1.85e-04 | 1.11 steps/sec
+  Step  14750/36621 | Loss: 4.0222 | Avg: 3.4639 | LR: 1.84e-04 | 1.11 steps/sec
+  Step  14800/36621 | Loss: 3.1681 | Avg: 3.4994 | LR: 1.84e-04 | 1.11 steps/sec
+  Step  14850/36621 | Loss: 3.0052 | Avg: 3.4379 | LR: 1.83e-04 | 1.11 steps/sec
+  Step  14900/36621 | Loss: 3.5649 | Avg: 3.5269 | LR: 1.83e-04 | 1.11 steps/sec
+  Step  14950/36621 | Loss: 2.9904 | Avg: 3.5040 | LR: 1.83e-04 | 1.11 steps/sec
+  Step  15000/36621 | Loss: 3.8146 | Avg: 3.4088 | LR: 1.82e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 28.74
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_15000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_11000.pt
+  Step  15050/36621 | Loss: 3.3835 | Avg: 3.4434 | LR: 1.82e-04 | 1.11 steps/sec
+  Step  15100/36621 | Loss: 3.5150 | Avg: 3.4481 | LR: 1.81e-04 | 1.11 steps/sec
+  Step  15150/36621 | Loss: 3.3234 | Avg: 3.4144 | LR: 1.81e-04 | 1.11 steps/sec
+  Step  15200/36621 | Loss: 3.5739 | Avg: 3.4997 | LR: 1.80e-04 | 1.11 steps/sec
+  Step  15250/36621 | Loss: 4.1201 | Avg: 3.4996 | LR: 1.80e-04 | 1.11 steps/sec
+  Step  15300/36621 | Loss: 3.0044 | Avg: 3.4548 | LR: 1.80e-04 | 1.11 steps/sec
+  Step  15350/36621 | Loss: 3.4422 | Avg: 3.4156 | LR: 1.79e-04 | 1.11 steps/sec
+  Step  15400/36621 | Loss: 3.5719 | Avg: 3.4536 | LR: 1.79e-04 | 1.11 steps/sec
+  Step  15450/36621 | Loss: 3.5048 | Avg: 3.4974 | LR: 1.78e-04 | 1.11 steps/sec
+  Step  15500/36621 | Loss: 3.4409 | Avg: 3.4879 | LR: 1.78e-04 | 1.11 steps/sec
+  Step  15550/36621 | Loss: 3.4735 | Avg: 3.4233 | LR: 1.77e-04 | 1.11 steps/sec
+  Step  15600/36621 | Loss: 3.2171 | Avg: 3.3806 | LR: 1.77e-04 | 1.11 steps/sec
+  Step  15650/36621 | Loss: 3.6953 | Avg: 3.4310 | LR: 1.77e-04 | 1.11 steps/sec
+  Step  15700/36621 | Loss: 3.5150 | Avg: 3.4066 | LR: 1.76e-04 | 1.11 steps/sec
+  Step  15750/36621 | Loss: 3.9155 | Avg: 3.5033 | LR: 1.76e-04 | 1.11 steps/sec
+  Step  15800/36621 | Loss: 3.5320 | Avg: 3.4673 | LR: 1.75e-04 | 1.11 steps/sec
+  Step  15850/36621 | Loss: 3.0800 | Avg: 3.4790 | LR: 1.75e-04 | 1.11 steps/sec
+  Step  15900/36621 | Loss: 3.4106 | Avg: 3.4502 | LR: 1.75e-04 | 1.11 steps/sec
+  Step  15950/36621 | Loss: 3.7937 | Avg: 3.4642 | LR: 1.74e-04 | 1.11 steps/sec
+  Step  16000/36621 | Loss: 2.8813 | Avg: 3.4305 | LR: 1.74e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 27.92
+
+
+  Generating samples...
+
+  [Sample 1]  of the term " disease " . 
+ = = = = Other theories = = = = 
+ As with the first decades of the 20th century , however , the term " disease " has generally been used as a common term for the most commo...
+
+  [Sample 2]  in the process , however , is the beginning of a real @-@ life , mysterious , universe . 
+ = = = Setting = = = 
+ The story of the sixth and final installment , " The Great Flood " , was written by di...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_16000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_12000.pt
+  Step  16050/36621 | Loss: 3.0638 | Avg: 3.4187 | LR: 1.73e-04 | 1.11 steps/sec
+  Step  16100/36621 | Loss: 3.4106 | Avg: 3.4185 | LR: 1.73e-04 | 1.11 steps/sec
+  Step  16150/36621 | Loss: 3.0199 | Avg: 3.3767 | LR: 1.72e-04 | 1.11 steps/sec
+  Step  16200/36621 | Loss: 3.9938 | Avg: 3.5524 | LR: 1.72e-04 | 1.11 steps/sec
+  Step  16250/36621 | Loss: 3.5580 | Avg: 3.4414 | LR: 1.72e-04 | 1.11 steps/sec
+  Step  16300/36621 | Loss: 3.4487 | Avg: 3.4165 | LR: 1.71e-04 | 1.11 steps/sec
+  Step  16350/36621 | Loss: 2.9055 | Avg: 3.3533 | LR: 1.71e-04 | 1.11 steps/sec
+  Step  16400/36621 | Loss: 3.3691 | Avg: 3.3592 | LR: 1.70e-04 | 1.11 steps/sec
+  Step  16450/36621 | Loss: 3.0261 | Avg: 3.3873 | LR: 1.70e-04 | 1.11 steps/sec
+  Step  16500/36621 | Loss: 3.3906 | Avg: 3.3624 | LR: 1.69e-04 | 1.11 steps/sec
+  Step  16550/36621 | Loss: 3.4924 | Avg: 3.4127 | LR: 1.69e-04 | 1.11 steps/sec
+  Step  16600/36621 | Loss: 3.2455 | Avg: 3.3628 | LR: 1.69e-04 | 1.11 steps/sec
+  Step  16650/36621 | Loss: 3.0884 | Avg: 3.4560 | LR: 1.68e-04 | 1.11 steps/sec
+  Step  16700/36621 | Loss: 3.2776 | Avg: 3.3994 | LR: 1.68e-04 | 1.11 steps/sec
+  Step  16750/36621 | Loss: 3.1658 | Avg: 3.4406 | LR: 1.67e-04 | 1.11 steps/sec
+  Step  16800/36621 | Loss: 3.1484 | Avg: 3.3862 | LR: 1.67e-04 | 1.11 steps/sec
+  Step  16850/36621 | Loss: 3.6396 | Avg: 3.3977 | LR: 1.67e-04 | 1.11 steps/sec
+  Step  16900/36621 | Loss: 3.2431 | Avg: 3.3912 | LR: 1.66e-04 | 1.11 steps/sec
+  Step  16950/36621 | Loss: 3.4532 | Avg: 3.3106 | LR: 1.66e-04 | 1.11 steps/sec
+  Step  17000/36621 | Loss: 3.3489 | Avg: 3.4137 | LR: 1.65e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 27.44
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_17000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_13000.pt
+  Step  17050/36621 | Loss: 3.9466 | Avg: 3.4303 | LR: 1.65e-04 | 1.11 steps/sec
+  Step  17100/36621 | Loss: 3.4489 | Avg: 3.3601 | LR: 1.64e-04 | 1.11 steps/sec
+  Step  17150/36621 | Loss: 3.1991 | Avg: 3.3718 | LR: 1.64e-04 | 1.11 steps/sec
+  Step  17200/36621 | Loss: 3.3730 | Avg: 3.4206 | LR: 1.64e-04 | 1.11 steps/sec
+  Step  17250/36621 | Loss: 3.5937 | Avg: 3.4217 | LR: 1.63e-04 | 1.11 steps/sec
+  Step  17300/36621 | Loss: 3.2931 | Avg: 3.3470 | LR: 1.63e-04 | 1.11 steps/sec
+  Step  17350/36621 | Loss: 2.8043 | Avg: 3.3592 | LR: 1.62e-04 | 1.11 steps/sec
+  Step  17400/36621 | Loss: 3.7034 | Avg: 3.4073 | LR: 1.62e-04 | 1.11 steps/sec
+  Step  17450/36621 | Loss: 3.2198 | Avg: 3.3732 | LR: 1.61e-04 | 1.11 steps/sec
+  Step  17500/36621 | Loss: 3.2021 | Avg: 3.4308 | LR: 1.61e-04 | 1.11 steps/sec
+  Step  17550/36621 | Loss: 3.0455 | Avg: 3.3488 | LR: 1.61e-04 | 1.11 steps/sec
+  Step  17600/36621 | Loss: 3.2571 | Avg: 3.4261 | LR: 1.60e-04 | 1.11 steps/sec
+  Step  17650/36621 | Loss: 3.2037 | Avg: 3.3753 | LR: 1.60e-04 | 1.11 steps/sec
+  Step  17700/36621 | Loss: 3.6692 | Avg: 3.4764 | LR: 1.59e-04 | 1.11 steps/sec
+  Step  17750/36621 | Loss: 2.7233 | Avg: 3.4336 | LR: 1.59e-04 | 1.11 steps/sec
+  Step  17800/36621 | Loss: 2.9607 | Avg: 3.2842 | LR: 1.59e-04 | 1.11 steps/sec
+  Step  17850/36621 | Loss: 3.6213 | Avg: 3.4360 | LR: 1.58e-04 | 1.11 steps/sec
+  Step  17900/36621 | Loss: 3.4842 | Avg: 3.3600 | LR: 1.58e-04 | 1.11 steps/sec
+  Step  17950/36621 | Loss: 4.0257 | Avg: 3.4039 | LR: 1.57e-04 | 1.11 steps/sec
+  Step  18000/36621 | Loss: 2.9520 | Avg: 3.3426 | LR: 1.57e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 26.75
+
+
+  Generating samples...
+
+  [Sample 1]  from the sky . 
+ As the ship was being completed , the crew had to be housed in a small building on the side of the ship , on either side of the ship 's side . The ship 's crew members were not avail...
+
+  [Sample 2]  of their identity and their identity . 
+ = = = = Senses = = = = 
+ A series of " T " events in this episode are : 
+ The second episode of the sixth season " The Critic of the Year " , broadcast on Apr...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_18000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_14000.pt
+  Step  18050/36621 | Loss: 3.1280 | Avg: 3.3068 | LR: 1.56e-04 | 1.11 steps/sec
+  Step  18100/36621 | Loss: 3.2100 | Avg: 3.3298 | LR: 1.56e-04 | 1.11 steps/sec
+  Step  18150/36621 | Loss: 3.4649 | Avg: 3.3476 | LR: 1.56e-04 | 1.11 steps/sec
+  Step  18200/36621 | Loss: 3.8473 | Avg: 3.3627 | LR: 1.55e-04 | 1.11 steps/sec
+  Step  18250/36621 | Loss: 3.2528 | Avg: 3.3743 | LR: 1.55e-04 | 1.11 steps/sec
+  Step  18300/36621 | Loss: 3.1990 | Avg: 3.3093 | LR: 1.54e-04 | 1.11 steps/sec
+  Step  18350/36621 | Loss: 3.3853 | Avg: 3.3536 | LR: 1.54e-04 | 1.11 steps/sec
+  Step  18400/36621 | Loss: 3.0542 | Avg: 3.2670 | LR: 1.53e-04 | 1.11 steps/sec
+  Step  18450/36621 | Loss: 3.0537 | Avg: 3.3668 | LR: 1.53e-04 | 1.11 steps/sec
+  Step  18500/36621 | Loss: 3.0897 | Avg: 3.4258 | LR: 1.53e-04 | 1.11 steps/sec
+  Step  18550/36621 | Loss: 3.2019 | Avg: 3.3079 | LR: 1.52e-04 | 1.11 steps/sec
+  Step  18600/36621 | Loss: 3.3214 | Avg: 3.3995 | LR: 1.52e-04 | 1.11 steps/sec
+  Step  18650/36621 | Loss: 3.4504 | Avg: 3.4409 | LR: 1.51e-04 | 1.11 steps/sec
+  Step  18700/36621 | Loss: 3.6073 | Avg: 3.3265 | LR: 1.51e-04 | 1.11 steps/sec
+  Step  18750/36621 | Loss: 3.3362 | Avg: 3.4104 | LR: 1.51e-04 | 1.11 steps/sec
+  Step  18800/36621 | Loss: 2.8771 | Avg: 3.3538 | LR: 1.50e-04 | 1.11 steps/sec
+  Step  18850/36621 | Loss: 3.4049 | Avg: 3.3139 | LR: 1.50e-04 | 1.11 steps/sec
+  Step  18900/36621 | Loss: 3.2525 | Avg: 3.3578 | LR: 1.49e-04 | 1.11 steps/sec
+  Step  18950/36621 | Loss: 3.4914 | Avg: 3.3452 | LR: 1.49e-04 | 1.11 steps/sec
+  Step  19000/36621 | Loss: 3.6237 | Avg: 3.3976 | LR: 1.48e-04 | 1.11 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 25.99
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_19000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_15000.pt
+  Step  19050/36621 | Loss: 3.4616 | Avg: 3.3043 | LR: 1.48e-04 | 1.11 steps/sec
+  Step  19100/36621 | Loss: 3.1543 | Avg: 3.3289 | LR: 1.48e-04 | 1.11 steps/sec
+  Step  19150/36621 | Loss: 3.1676 | Avg: 3.2972 | LR: 1.47e-04 | 1.11 steps/sec
+  Step  19200/36621 | Loss: 3.3516 | Avg: 3.3528 | LR: 1.47e-04 | 1.11 steps/sec
+  Step  19250/36621 | Loss: 3.1158 | Avg: 3.3529 | LR: 1.46e-04 | 1.11 steps/sec
+  Step  19300/36621 | Loss: 2.8640 | Avg: 3.3072 | LR: 1.46e-04 | 1.11 steps/sec
+  Step  19350/36621 | Loss: 3.6265 | Avg: 3.3116 | LR: 1.45e-04 | 1.11 steps/sec
+  Step  19400/36621 | Loss: 3.3404 | Avg: 3.4047 | LR: 1.45e-04 | 1.11 steps/sec
+  Step  19450/36621 | Loss: 3.3101 | Avg: 3.2585 | LR: 1.45e-04 | 1.11 steps/sec
+  Step  19500/36621 | Loss: 3.3035 | Avg: 3.3553 | LR: 1.44e-04 | 1.11 steps/sec
+  Step  19550/36621 | Loss: 3.5520 | Avg: 3.3987 | LR: 1.44e-04 | 1.11 steps/sec
+  Step  19600/36621 | Loss: 2.9686 | Avg: 3.3159 | LR: 1.43e-04 | 1.11 steps/sec
+  Step  19650/36621 | Loss: 3.4658 | Avg: 3.3096 | LR: 1.43e-04 | 1.12 steps/sec
+  Step  19700/36621 | Loss: 3.5750 | Avg: 3.3242 | LR: 1.43e-04 | 1.12 steps/sec
+  Step  19750/36621 | Loss: 3.7768 | Avg: 3.2158 | LR: 1.42e-04 | 1.12 steps/sec
+  Step  19800/36621 | Loss: 2.8647 | Avg: 3.3468 | LR: 1.42e-04 | 1.12 steps/sec
+  Step  19850/36621 | Loss: 3.0283 | Avg: 3.2587 | LR: 1.41e-04 | 1.12 steps/sec
+  Step  19900/36621 | Loss: 3.2937 | Avg: 3.3350 | LR: 1.41e-04 | 1.12 steps/sec
+  Step  19950/36621 | Loss: 3.3725 | Avg: 3.3031 | LR: 1.40e-04 | 1.12 steps/sec
+  Step  20000/36621 | Loss: 3.3353 | Avg: 3.2764 | LR: 1.40e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 25.45
+
+
+  Generating samples...
+
+  [Sample 1]  . " 
+ = = = = Decline = = = = 
+ The initial population of the region was roughly 500 @,@ 000 , while the population density of the area was 1 @,@ 000 people per square kilometre ( 6 @,@ 600 / km ² ) ...
+
+  [Sample 2]  is not necessary , but it is also necessary to clear the area and to prevent the spread of disease in this area . 
+ = = Causes = = 
+ The history of the disease is more broadly based on the history of...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_20000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_16000.pt
+  Step  20050/36621 | Loss: 3.6884 | Avg: 3.3432 | LR: 1.40e-04 | 1.11 steps/sec
+  Step  20100/36621 | Loss: 3.1920 | Avg: 3.2428 | LR: 1.39e-04 | 1.12 steps/sec
+  Step  20150/36621 | Loss: 3.5192 | Avg: 3.2204 | LR: 1.39e-04 | 1.12 steps/sec
+  Step  20200/36621 | Loss: 3.3986 | Avg: 3.2663 | LR: 1.38e-04 | 1.12 steps/sec
+  Step  20250/36621 | Loss: 3.2412 | Avg: 3.3286 | LR: 1.38e-04 | 1.12 steps/sec
+  Step  20300/36621 | Loss: 3.6049 | Avg: 3.3156 | LR: 1.37e-04 | 1.12 steps/sec
+  Step  20350/36621 | Loss: 3.0342 | Avg: 3.3042 | LR: 1.37e-04 | 1.12 steps/sec
+  Step  20400/36621 | Loss: 2.6714 | Avg: 3.2293 | LR: 1.37e-04 | 1.12 steps/sec
+  Step  20450/36621 | Loss: 2.8335 | Avg: 3.3429 | LR: 1.36e-04 | 1.12 steps/sec
+  Step  20500/36621 | Loss: 3.1566 | Avg: 3.3487 | LR: 1.36e-04 | 1.12 steps/sec
+  Step  20550/36621 | Loss: 3.0223 | Avg: 3.3461 | LR: 1.35e-04 | 1.12 steps/sec
+  Step  20600/36621 | Loss: 3.4793 | Avg: 3.2974 | LR: 1.35e-04 | 1.12 steps/sec
+  Step  20650/36621 | Loss: 3.2741 | Avg: 3.3414 | LR: 1.35e-04 | 1.12 steps/sec
+  Step  20700/36621 | Loss: 3.6013 | Avg: 3.2757 | LR: 1.34e-04 | 1.12 steps/sec
+  Step  20750/36621 | Loss: 3.4464 | Avg: 3.2293 | LR: 1.34e-04 | 1.12 steps/sec
+  Step  20800/36621 | Loss: 3.6861 | Avg: 3.2045 | LR: 1.33e-04 | 1.12 steps/sec
+  Step  20850/36621 | Loss: 3.3423 | Avg: 3.2968 | LR: 1.33e-04 | 1.12 steps/sec
+  Step  20900/36621 | Loss: 3.2461 | Avg: 3.2407 | LR: 1.32e-04 | 1.12 steps/sec
+  Step  20950/36621 | Loss: 3.0411 | Avg: 3.2956 | LR: 1.32e-04 | 1.12 steps/sec
+  Step  21000/36621 | Loss: 3.8552 | Avg: 3.2422 | LR: 1.32e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 24.91
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_21000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_17000.pt
+  Step  21050/36621 | Loss: 2.8456 | Avg: 3.2786 | LR: 1.31e-04 | 1.12 steps/sec
+  Step  21100/36621 | Loss: 3.0980 | Avg: 3.2997 | LR: 1.31e-04 | 1.12 steps/sec
+  Step  21150/36621 | Loss: 3.1224 | Avg: 3.3549 | LR: 1.30e-04 | 1.12 steps/sec
+  Step  21200/36621 | Loss: 3.4960 | Avg: 3.2237 | LR: 1.30e-04 | 1.12 steps/sec
+  Step  21250/36621 | Loss: 3.5726 | Avg: 3.2900 | LR: 1.29e-04 | 1.12 steps/sec
+  Step  21300/36621 | Loss: 3.4718 | Avg: 3.2254 | LR: 1.29e-04 | 1.12 steps/sec
+  Step  21350/36621 | Loss: 3.0777 | Avg: 3.2440 | LR: 1.29e-04 | 1.12 steps/sec
+  Step  21400/36621 | Loss: 3.1346 | Avg: 3.2068 | LR: 1.28e-04 | 1.12 steps/sec
+  Step  21450/36621 | Loss: 3.6004 | Avg: 3.2694 | LR: 1.28e-04 | 1.12 steps/sec
+  Step  21500/36621 | Loss: 3.3698 | Avg: 3.2669 | LR: 1.27e-04 | 1.12 steps/sec
+  Step  21550/36621 | Loss: 3.3477 | Avg: 3.3102 | LR: 1.27e-04 | 1.12 steps/sec
+  Step  21600/36621 | Loss: 2.8445 | Avg: 3.2147 | LR: 1.27e-04 | 1.12 steps/sec
+  Step  21650/36621 | Loss: 2.8389 | Avg: 3.3317 | LR: 1.26e-04 | 1.12 steps/sec
+  Step  21700/36621 | Loss: 3.5186 | Avg: 3.2686 | LR: 1.26e-04 | 1.12 steps/sec
+  Step  21750/36621 | Loss: 2.6839 | Avg: 3.2503 | LR: 1.25e-04 | 1.12 steps/sec
+  Step  21800/36621 | Loss: 3.3643 | Avg: 3.2426 | LR: 1.25e-04 | 1.12 steps/sec
+  Step  21850/36621 | Loss: 3.3668 | Avg: 3.2889 | LR: 1.24e-04 | 1.12 steps/sec
+  Step  21900/36621 | Loss: 3.3111 | Avg: 3.1933 | LR: 1.24e-04 | 1.12 steps/sec
+  Step  21950/36621 | Loss: 3.1871 | Avg: 3.1966 | LR: 1.24e-04 | 1.12 steps/sec
+  Step  22000/36621 | Loss: 3.5233 | Avg: 3.2597 | LR: 1.23e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 24.56
+
+
+  Generating samples...
+
+  [Sample 1]  to understand and appreciate or express the meaning of the experience of those who have had . This is a crucial part of the novel . It draws upon the history of the philosopher and is inspired by the...
+
+  [Sample 2]  of his actions , the action was a significant factor as he became ill and died . He died in February 1841 , aged 67 . His wife was the last surviving composer to have ever performed . He was , throug...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_22000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_18000.pt
+  Step  22050/36621 | Loss: 3.5122 | Avg: 3.2084 | LR: 1.23e-04 | 1.12 steps/sec
+  Step  22100/36621 | Loss: 3.1200 | Avg: 3.2268 | LR: 1.22e-04 | 1.12 steps/sec
+  Step  22150/36621 | Loss: 2.9775 | Avg: 3.2356 | LR: 1.22e-04 | 1.12 steps/sec
+  Step  22200/36621 | Loss: 3.1988 | Avg: 3.1948 | LR: 1.21e-04 | 1.12 steps/sec
+  Step  22250/36621 | Loss: 3.5030 | Avg: 3.1475 | LR: 1.21e-04 | 1.12 steps/sec
+  Step  22300/36621 | Loss: 2.7805 | Avg: 3.1603 | LR: 1.21e-04 | 1.12 steps/sec
+  Step  22350/36621 | Loss: 3.4965 | Avg: 3.2825 | LR: 1.20e-04 | 1.12 steps/sec
+  Step  22400/36621 | Loss: 3.2963 | Avg: 3.1801 | LR: 1.20e-04 | 1.12 steps/sec
+  Step  22450/36621 | Loss: 3.4437 | Avg: 3.1859 | LR: 1.19e-04 | 1.12 steps/sec
+  Step  22500/36621 | Loss: 3.4963 | Avg: 3.1941 | LR: 1.19e-04 | 1.12 steps/sec
+  Step  22550/36621 | Loss: 3.4237 | Avg: 3.2659 | LR: 1.19e-04 | 1.12 steps/sec
+  Step  22600/36621 | Loss: 3.2919 | Avg: 3.2062 | LR: 1.18e-04 | 1.12 steps/sec
+  Step  22650/36621 | Loss: 3.2040 | Avg: 3.2261 | LR: 1.18e-04 | 1.12 steps/sec
+  Step  22700/36621 | Loss: 3.0715 | Avg: 3.2096 | LR: 1.17e-04 | 1.12 steps/sec
+  Step  22750/36621 | Loss: 2.7994 | Avg: 3.2054 | LR: 1.17e-04 | 1.12 steps/sec
+  Step  22800/36621 | Loss: 3.3971 | Avg: 3.2194 | LR: 1.16e-04 | 1.12 steps/sec
+  Step  22850/36621 | Loss: 2.9534 | Avg: 3.2009 | LR: 1.16e-04 | 1.12 steps/sec
+  Step  22900/36621 | Loss: 3.5032 | Avg: 3.2362 | LR: 1.16e-04 | 1.12 steps/sec
+  Step  22950/36621 | Loss: 3.1651 | Avg: 3.2060 | LR: 1.15e-04 | 1.12 steps/sec
+  Step  23000/36621 | Loss: 2.7896 | Avg: 3.1842 | LR: 1.15e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 24.15
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_23000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_19000.pt
+  Step  23050/36621 | Loss: 3.3659 | Avg: 3.1961 | LR: 1.14e-04 | 1.12 steps/sec
+  Step  23100/36621 | Loss: 3.1721 | Avg: 3.2620 | LR: 1.14e-04 | 1.12 steps/sec
+  Step  23150/36621 | Loss: 3.3375 | Avg: 3.2416 | LR: 1.13e-04 | 1.12 steps/sec
+  Step  23200/36621 | Loss: 3.1857 | Avg: 3.2441 | LR: 1.13e-04 | 1.12 steps/sec
+  Step  23250/36621 | Loss: 3.4753 | Avg: 3.2102 | LR: 1.13e-04 | 1.12 steps/sec
+  Step  23300/36621 | Loss: 2.8943 | Avg: 3.2686 | LR: 1.12e-04 | 1.12 steps/sec
+  Step  23350/36621 | Loss: 3.7011 | Avg: 3.1890 | LR: 1.12e-04 | 1.12 steps/sec
+  Step  23400/36621 | Loss: 3.5792 | Avg: 3.3116 | LR: 1.11e-04 | 1.12 steps/sec
+  Step  23450/36621 | Loss: 3.4244 | Avg: 3.2308 | LR: 1.11e-04 | 1.12 steps/sec
+  Step  23500/36621 | Loss: 2.7942 | Avg: 3.1506 | LR: 1.11e-04 | 1.12 steps/sec
+  Step  23550/36621 | Loss: 3.3611 | Avg: 3.3374 | LR: 1.10e-04 | 1.12 steps/sec
+  Step  23600/36621 | Loss: 2.8400 | Avg: 3.2604 | LR: 1.10e-04 | 1.12 steps/sec
+  Step  23650/36621 | Loss: 2.9793 | Avg: 3.2182 | LR: 1.09e-04 | 1.12 steps/sec
+  Step  23700/36621 | Loss: 2.9748 | Avg: 3.2191 | LR: 1.09e-04 | 1.12 steps/sec
+  Step  23750/36621 | Loss: 2.8284 | Avg: 3.2210 | LR: 1.08e-04 | 1.12 steps/sec
+  Step  23800/36621 | Loss: 3.3304 | Avg: 3.2169 | LR: 1.08e-04 | 1.12 steps/sec
+  Step  23850/36621 | Loss: 3.2833 | Avg: 3.2037 | LR: 1.08e-04 | 1.12 steps/sec
+  Step  23900/36621 | Loss: 3.6888 | Avg: 3.2680 | LR: 1.07e-04 | 1.12 steps/sec
+  Step  23950/36621 | Loss: 3.3629 | Avg: 3.1631 | LR: 1.07e-04 | 1.12 steps/sec
+  Step  24000/36621 | Loss: 3.1966 | Avg: 3.2246 | LR: 1.06e-04 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 23.61
+
+
+  Generating samples...
+
+  [Sample 1]  is the same method used to produce a specific type , and is used in the manufacture of a standardized type . 
+ In 1856 , the British Royal Mint took a separate breed with the British Mint , which was...
+
+  [Sample 2]  , and its relative effectiveness and frequency , which is one of the few countries that have developed such a system . It is also the second most popular brand of brand brand , and an important brand...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_24000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_20000.pt
+  Step  24050/36621 | Loss: 2.8522 | Avg: 3.2262 | LR: 1.06e-04 | 1.12 steps/sec
+  Step  24100/36621 | Loss: 2.9863 | Avg: 3.1813 | LR: 1.05e-04 | 1.12 steps/sec
+  Step  24150/36621 | Loss: 3.5952 | Avg: 3.1619 | LR: 1.05e-04 | 1.12 steps/sec
+  Step  24200/36621 | Loss: 3.1830 | Avg: 3.1828 | LR: 1.05e-04 | 1.12 steps/sec
+  Step  24250/36621 | Loss: 3.6341 | Avg: 3.1899 | LR: 1.04e-04 | 1.12 steps/sec
+  Step  24300/36621 | Loss: 3.4393 | Avg: 3.2136 | LR: 1.04e-04 | 1.12 steps/sec
+  Step  24350/36621 | Loss: 3.1858 | Avg: 3.1068 | LR: 1.03e-04 | 1.12 steps/sec
+  Step  24400/36621 | Loss: 2.9431 | Avg: 3.0958 | LR: 1.03e-04 | 1.12 steps/sec
+  Step  24450/36621 | Loss: 2.7871 | Avg: 3.2042 | LR: 1.03e-04 | 1.12 steps/sec
+  Step  24500/36621 | Loss: 3.2605 | Avg: 3.2388 | LR: 1.02e-04 | 1.12 steps/sec
+  Step  24550/36621 | Loss: 2.9540 | Avg: 3.1997 | LR: 1.02e-04 | 1.12 steps/sec
+  Step  24600/36621 | Loss: 3.6299 | Avg: 3.1709 | LR: 1.01e-04 | 1.12 steps/sec
+  Step  24650/36621 | Loss: 2.7780 | Avg: 3.1137 | LR: 1.01e-04 | 1.12 steps/sec
+  Step  24700/36621 | Loss: 2.9294 | Avg: 3.1635 | LR: 1.00e-04 | 1.12 steps/sec
+  Step  24750/36621 | Loss: 2.8872 | Avg: 3.1815 | LR: 1.00e-04 | 1.12 steps/sec
+  Step  24800/36621 | Loss: 2.9323 | Avg: 3.2539 | LR: 9.96e-05 | 1.12 steps/sec
+  Step  24850/36621 | Loss: 2.9099 | Avg: 3.1736 | LR: 9.91e-05 | 1.12 steps/sec
+  Step  24900/36621 | Loss: 2.9469 | Avg: 3.1216 | LR: 9.87e-05 | 1.12 steps/sec
+  Step  24950/36621 | Loss: 3.0605 | Avg: 3.1728 | LR: 9.83e-05 | 1.12 steps/sec
+  Step  25000/36621 | Loss: 3.2671 | Avg: 3.1453 | LR: 9.79e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 23.12
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_25000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_21000.pt
+  Step  25050/36621 | Loss: 2.7238 | Avg: 3.1904 | LR: 9.75e-05 | 1.12 steps/sec
+  Step  25100/36621 | Loss: 2.7691 | Avg: 3.1782 | LR: 9.70e-05 | 1.12 steps/sec
+  Step  25150/36621 | Loss: 3.1812 | Avg: 3.1500 | LR: 9.66e-05 | 1.12 steps/sec
+  Step  25200/36621 | Loss: 3.2969 | Avg: 3.1863 | LR: 9.62e-05 | 1.12 steps/sec
+  Step  25250/36621 | Loss: 2.8895 | Avg: 3.1706 | LR: 9.58e-05 | 1.12 steps/sec
+  Step  25300/36621 | Loss: 2.5934 | Avg: 3.1590 | LR: 9.53e-05 | 1.12 steps/sec
+  Step  25350/36621 | Loss: 3.2017 | Avg: 3.1887 | LR: 9.49e-05 | 1.12 steps/sec
+  Step  25400/36621 | Loss: 3.3987 | Avg: 3.2444 | LR: 9.45e-05 | 1.12 steps/sec
+  Step  25450/36621 | Loss: 2.8342 | Avg: 3.1681 | LR: 9.41e-05 | 1.12 steps/sec
+  Step  25500/36621 | Loss: 3.1426 | Avg: 3.1173 | LR: 9.37e-05 | 1.12 steps/sec
+  Step  25550/36621 | Loss: 3.3135 | Avg: 3.1118 | LR: 9.32e-05 | 1.12 steps/sec
+  Step  25600/36621 | Loss: 3.2684 | Avg: 3.1660 | LR: 9.28e-05 | 1.12 steps/sec
+  Step  25650/36621 | Loss: 3.2047 | Avg: 3.1739 | LR: 9.24e-05 | 1.12 steps/sec
+  Step  25700/36621 | Loss: 2.7091 | Avg: 3.1235 | LR: 9.20e-05 | 1.12 steps/sec
+  Step  25750/36621 | Loss: 2.9845 | Avg: 3.1694 | LR: 9.16e-05 | 1.12 steps/sec
+  Step  25800/36621 | Loss: 3.0065 | Avg: 3.1521 | LR: 9.11e-05 | 1.12 steps/sec
+  Step  25850/36621 | Loss: 3.5450 | Avg: 3.2072 | LR: 9.07e-05 | 1.12 steps/sec
+  Step  25900/36621 | Loss: 3.4115 | Avg: 3.1184 | LR: 9.03e-05 | 1.12 steps/sec
+  Step  25950/36621 | Loss: 3.3202 | Avg: 3.1067 | LR: 8.99e-05 | 1.12 steps/sec
+  Step  26000/36621 | Loss: 2.8966 | Avg: 3.1541 | LR: 8.95e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 22.70
+
+
+  Generating samples...
+
+  [Sample 1]  . It is used as a protective coating rather than a protective coating . 
+ It was introduced to the United States in the 1950s , by the United States government , by Edward D. Roosevelt , the United S...
+
+  [Sample 2]  were the only difference . 
+ The first year 's winner , Michael Schurke won the stage 1 individual time trial event . This was followed by the second stage 1 male time trial at the Tchaikovsky Olympi...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_26000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_22000.pt
+  Step  26050/36621 | Loss: 3.1107 | Avg: 3.1092 | LR: 8.90e-05 | 1.12 steps/sec
+  Step  26100/36621 | Loss: 3.2608 | Avg: 3.0571 | LR: 8.86e-05 | 1.12 steps/sec
+  Step  26150/36621 | Loss: 3.2321 | Avg: 3.1807 | LR: 8.82e-05 | 1.12 steps/sec
+  Step  26200/36621 | Loss: 3.0224 | Avg: 3.1006 | LR: 8.78e-05 | 1.12 steps/sec
+  Step  26250/36621 | Loss: 3.1850 | Avg: 3.2228 | LR: 8.73e-05 | 1.12 steps/sec
+  Step  26300/36621 | Loss: 2.8910 | Avg: 3.0365 | LR: 8.69e-05 | 1.12 steps/sec
+  Step  26350/36621 | Loss: 2.8685 | Avg: 3.0779 | LR: 8.65e-05 | 1.12 steps/sec
+  Step  26400/36621 | Loss: 2.5577 | Avg: 3.0873 | LR: 8.61e-05 | 1.12 steps/sec
+  Step  26450/36621 | Loss: 3.1459 | Avg: 3.2478 | LR: 8.57e-05 | 1.12 steps/sec
+  Step  26500/36621 | Loss: 3.3245 | Avg: 3.2313 | LR: 8.52e-05 | 1.12 steps/sec
+  Step  26550/36621 | Loss: 3.0906 | Avg: 3.1896 | LR: 8.48e-05 | 1.12 steps/sec
+  Step  26600/36621 | Loss: 3.0802 | Avg: 3.1713 | LR: 8.44e-05 | 1.12 steps/sec
+  Step  26650/36621 | Loss: 2.9849 | Avg: 3.1665 | LR: 8.40e-05 | 1.12 steps/sec
+  Step  26700/36621 | Loss: 3.1389 | Avg: 3.0680 | LR: 8.36e-05 | 1.12 steps/sec
+  Step  26750/36621 | Loss: 3.1852 | Avg: 3.1785 | LR: 8.31e-05 | 1.12 steps/sec
+  Step  26800/36621 | Loss: 3.3230 | Avg: 3.1164 | LR: 8.27e-05 | 1.12 steps/sec
+  Step  26850/36621 | Loss: 3.2103 | Avg: 3.0841 | LR: 8.23e-05 | 1.12 steps/sec
+  Step  26900/36621 | Loss: 2.7192 | Avg: 3.2318 | LR: 8.19e-05 | 1.12 steps/sec
+  Step  26950/36621 | Loss: 3.0465 | Avg: 3.1635 | LR: 8.14e-05 | 1.12 steps/sec
+  Step  27000/36621 | Loss: 2.9330 | Avg: 3.1428 | LR: 8.10e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 22.49
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_27000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_23000.pt
+  Step  27050/36621 | Loss: 2.9377 | Avg: 3.0933 | LR: 8.06e-05 | 1.12 steps/sec
+  Step  27100/36621 | Loss: 2.7766 | Avg: 3.1666 | LR: 8.02e-05 | 1.12 steps/sec
+  Step  27150/36621 | Loss: 2.9938 | Avg: 3.1256 | LR: 7.98e-05 | 1.12 steps/sec
+  Step  27200/36621 | Loss: 2.9794 | Avg: 3.0860 | LR: 7.93e-05 | 1.12 steps/sec
+  Step  27250/36621 | Loss: 2.4852 | Avg: 3.1504 | LR: 7.89e-05 | 1.12 steps/sec
+  Step  27300/36621 | Loss: 3.0604 | Avg: 3.1261 | LR: 7.85e-05 | 1.12 steps/sec
+  Step  27350/36621 | Loss: 3.2076 | Avg: 3.0762 | LR: 7.81e-05 | 1.12 steps/sec
+  Step  27400/36621 | Loss: 2.9432 | Avg: 3.2052 | LR: 7.77e-05 | 1.12 steps/sec
+  Step  27450/36621 | Loss: 3.2736 | Avg: 3.1284 | LR: 7.72e-05 | 1.12 steps/sec
+  Step  27500/36621 | Loss: 3.1691 | Avg: 3.0964 | LR: 7.68e-05 | 1.12 steps/sec
+  Step  27550/36621 | Loss: 2.3720 | Avg: 3.1163 | LR: 7.64e-05 | 1.12 steps/sec
+  Step  27600/36621 | Loss: 2.9899 | Avg: 3.2304 | LR: 7.60e-05 | 1.12 steps/sec
+  Step  27650/36621 | Loss: 2.8307 | Avg: 3.1329 | LR: 7.56e-05 | 1.12 steps/sec
+  Step  27700/36621 | Loss: 3.2510 | Avg: 3.1583 | LR: 7.51e-05 | 1.12 steps/sec
+  Step  27750/36621 | Loss: 3.2881 | Avg: 3.1854 | LR: 7.47e-05 | 1.12 steps/sec
+  Step  27800/36621 | Loss: 3.0224 | Avg: 3.1588 | LR: 7.43e-05 | 1.12 steps/sec
+  Step  27850/36621 | Loss: 3.6189 | Avg: 3.1710 | LR: 7.39e-05 | 1.12 steps/sec
+  Step  27900/36621 | Loss: 2.9751 | Avg: 3.0835 | LR: 7.34e-05 | 1.12 steps/sec
+  Step  27950/36621 | Loss: 2.8611 | Avg: 3.0949 | LR: 7.30e-05 | 1.12 steps/sec
+  Step  28000/36621 | Loss: 3.0448 | Avg: 3.1037 | LR: 7.26e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 22.28
+
+
+  Generating samples...
+
+  [Sample 1]  was expected , as was the case with the first such error . The government also had to be careful to make the error a number of times over the course of the trial . The first was the defence , and the...
+
+  [Sample 2]  ( 1 ) of this theory that the cause of an animal 's immune system is the cause of an illness . Thus , the principle that the ability to cause a disease is not unique to this theory . 
+ = = = Pregnanc...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_28000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_24000.pt
+  Step  28050/36621 | Loss: 2.7132 | Avg: 3.0406 | LR: 7.22e-05 | 1.12 steps/sec
+  Step  28100/36621 | Loss: 3.3033 | Avg: 3.1135 | LR: 7.18e-05 | 1.12 steps/sec
+  Step  28150/36621 | Loss: 3.0777 | Avg: 3.1031 | LR: 7.13e-05 | 1.12 steps/sec
+  Step  28200/36621 | Loss: 3.1246 | Avg: 3.1034 | LR: 7.09e-05 | 1.12 steps/sec
+  Step  28250/36621 | Loss: 3.5690 | Avg: 3.0635 | LR: 7.05e-05 | 1.12 steps/sec
+  Step  28300/36621 | Loss: 2.8133 | Avg: 2.9773 | LR: 7.01e-05 | 1.12 steps/sec
+  Step  28350/36621 | Loss: 2.8658 | Avg: 3.1040 | LR: 6.97e-05 | 1.12 steps/sec
+  Step  28400/36621 | Loss: 2.7964 | Avg: 3.1593 | LR: 6.92e-05 | 1.12 steps/sec
+  Step  28450/36621 | Loss: 3.3811 | Avg: 3.0394 | LR: 6.88e-05 | 1.12 steps/sec
+  Step  28500/36621 | Loss: 2.6645 | Avg: 3.0488 | LR: 6.84e-05 | 1.12 steps/sec
+  Step  28550/36621 | Loss: 3.3647 | Avg: 3.1286 | LR: 6.80e-05 | 1.12 steps/sec
+  Step  28600/36621 | Loss: 3.2592 | Avg: 3.1759 | LR: 6.76e-05 | 1.12 steps/sec
+  Step  28650/36621 | Loss: 2.8599 | Avg: 3.1015 | LR: 6.71e-05 | 1.12 steps/sec
+  Step  28700/36621 | Loss: 3.0738 | Avg: 3.0376 | LR: 6.67e-05 | 1.12 steps/sec
+  Step  28750/36621 | Loss: 3.4351 | Avg: 3.1393 | LR: 6.63e-05 | 1.12 steps/sec
+  Step  28800/36621 | Loss: 2.6457 | Avg: 3.0638 | LR: 6.59e-05 | 1.12 steps/sec
+  Step  28850/36621 | Loss: 3.2582 | Avg: 3.1490 | LR: 6.54e-05 | 1.12 steps/sec
+  Step  28900/36621 | Loss: 2.8636 | Avg: 3.0302 | LR: 6.50e-05 | 1.12 steps/sec
+  Step  28950/36621 | Loss: 2.8755 | Avg: 3.0366 | LR: 6.46e-05 | 1.12 steps/sec
+  Step  29000/36621 | Loss: 3.0750 | Avg: 3.0671 | LR: 6.42e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 21.90
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_29000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_25000.pt
+  Step  29050/36621 | Loss: 3.1100 | Avg: 3.1405 | LR: 6.38e-05 | 1.12 steps/sec
+  Step  29100/36621 | Loss: 3.5864 | Avg: 3.1711 | LR: 6.33e-05 | 1.12 steps/sec
+  Step  29150/36621 | Loss: 3.5639 | Avg: 3.0894 | LR: 6.29e-05 | 1.12 steps/sec
+  Step  29200/36621 | Loss: 3.1326 | Avg: 3.0857 | LR: 6.25e-05 | 1.12 steps/sec
+  Step  29250/36621 | Loss: 3.1703 | Avg: 3.0773 | LR: 6.21e-05 | 1.12 steps/sec
+  Step  29300/36621 | Loss: 3.2298 | Avg: 3.1421 | LR: 6.17e-05 | 1.12 steps/sec
+  Step  29350/36621 | Loss: 3.1096 | Avg: 3.1041 | LR: 6.12e-05 | 1.12 steps/sec
+  Step  29400/36621 | Loss: 3.0090 | Avg: 3.0142 | LR: 6.08e-05 | 1.12 steps/sec
+  Step  29450/36621 | Loss: 3.4277 | Avg: 3.1116 | LR: 6.04e-05 | 1.12 steps/sec
+  Step  29500/36621 | Loss: 2.9649 | Avg: 3.0203 | LR: 6.00e-05 | 1.12 steps/sec
+  Step  29550/36621 | Loss: 2.8100 | Avg: 3.0677 | LR: 5.96e-05 | 1.12 steps/sec
+  Step  29600/36621 | Loss: 3.1294 | Avg: 3.1120 | LR: 5.91e-05 | 1.12 steps/sec
+  Step  29650/36621 | Loss: 3.0851 | Avg: 3.0690 | LR: 5.87e-05 | 1.12 steps/sec
+  Step  29700/36621 | Loss: 2.9899 | Avg: 3.0918 | LR: 5.83e-05 | 1.12 steps/sec
+  Step  29750/36621 | Loss: 3.1997 | Avg: 3.0927 | LR: 5.79e-05 | 1.12 steps/sec
+  Step  29800/36621 | Loss: 2.7051 | Avg: 3.0682 | LR: 5.74e-05 | 1.12 steps/sec
+  Step  29850/36621 | Loss: 2.6202 | Avg: 3.1099 | LR: 5.70e-05 | 1.12 steps/sec
+  Step  29900/36621 | Loss: 3.6091 | Avg: 3.0822 | LR: 5.66e-05 | 1.12 steps/sec
+  Step  29950/36621 | Loss: 3.0489 | Avg: 3.0701 | LR: 5.62e-05 | 1.12 steps/sec
+  Step  30000/36621 | Loss: 3.2914 | Avg: 3.0235 | LR: 5.58e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 21.66
+
+
+  Generating samples...
+
+  [Sample 1]  of any kind , it became an important model in industrial engineering . 
+ As well as creating structural features , there was little or no technical oversight or oversight of buildings or buildings , ...
+
+  [Sample 2]  , or " ... ... " , have been used by scholars and scholars to create a " new , more realistic and exciting , more exciting " way that " could be used to entertain a world which is capable of doing an...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_30000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_26000.pt
+  Step  30050/36621 | Loss: 3.1214 | Avg: 3.0461 | LR: 5.53e-05 | 1.12 steps/sec
+  Step  30100/36621 | Loss: 3.5646 | Avg: 3.0288 | LR: 5.49e-05 | 1.12 steps/sec
+  Step  30150/36621 | Loss: 2.7443 | Avg: 3.0915 | LR: 5.45e-05 | 1.12 steps/sec
+  Step  30200/36621 | Loss: 3.4705 | Avg: 3.1446 | LR: 5.41e-05 | 1.12 steps/sec
+  Step  30250/36621 | Loss: 3.1185 | Avg: 3.1537 | LR: 5.37e-05 | 1.12 steps/sec
+  Step  30300/36621 | Loss: 2.9492 | Avg: 3.0867 | LR: 5.32e-05 | 1.12 steps/sec
+  Step  30350/36621 | Loss: 3.2575 | Avg: 3.0798 | LR: 5.28e-05 | 1.12 steps/sec
+  Step  30400/36621 | Loss: 3.2956 | Avg: 3.1001 | LR: 5.24e-05 | 1.12 steps/sec
+  Step  30450/36621 | Loss: 2.6305 | Avg: 3.0130 | LR: 5.20e-05 | 1.12 steps/sec
+  Step  30500/36621 | Loss: 3.0563 | Avg: 3.0678 | LR: 5.16e-05 | 1.12 steps/sec
+  Step  30550/36621 | Loss: 3.2322 | Avg: 3.0247 | LR: 5.11e-05 | 1.12 steps/sec
+  Step  30600/36621 | Loss: 2.8183 | Avg: 3.1910 | LR: 5.07e-05 | 1.12 steps/sec
+  Step  30650/36621 | Loss: 3.0984 | Avg: 3.0419 | LR: 5.03e-05 | 1.12 steps/sec
+  Step  30700/36621 | Loss: 3.1896 | Avg: 3.0504 | LR: 4.99e-05 | 1.12 steps/sec
+  Step  30750/36621 | Loss: 2.5179 | Avg: 3.0051 | LR: 4.94e-05 | 1.12 steps/sec
+  Step  30800/36621 | Loss: 3.4100 | Avg: 3.0560 | LR: 4.90e-05 | 1.12 steps/sec
+  Step  30850/36621 | Loss: 2.7487 | Avg: 3.0045 | LR: 4.86e-05 | 1.12 steps/sec
+  Step  30900/36621 | Loss: 3.0975 | Avg: 2.9990 | LR: 4.82e-05 | 1.12 steps/sec
+  Step  30950/36621 | Loss: 2.9240 | Avg: 3.0510 | LR: 4.78e-05 | 1.12 steps/sec
+  Step  31000/36621 | Loss: 3.0686 | Avg: 3.0081 | LR: 4.73e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 21.40
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_31000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_27000.pt
+  Step  31050/36621 | Loss: 3.0349 | Avg: 3.1223 | LR: 4.69e-05 | 1.12 steps/sec
+  Step  31100/36621 | Loss: 3.1345 | Avg: 3.0867 | LR: 4.65e-05 | 1.12 steps/sec
+  Step  31150/36621 | Loss: 2.8076 | Avg: 3.0158 | LR: 4.61e-05 | 1.12 steps/sec
+  Step  31200/36621 | Loss: 2.7832 | Avg: 3.0474 | LR: 4.57e-05 | 1.12 steps/sec
+  Step  31250/36621 | Loss: 3.1236 | Avg: 3.0300 | LR: 4.52e-05 | 1.12 steps/sec
+  Step  31300/36621 | Loss: 3.1760 | Avg: 3.0541 | LR: 4.48e-05 | 1.12 steps/sec
+  Step  31350/36621 | Loss: 3.2398 | Avg: 2.9592 | LR: 4.44e-05 | 1.12 steps/sec
+  Step  31400/36621 | Loss: 3.2365 | Avg: 3.0875 | LR: 4.40e-05 | 1.12 steps/sec
+  Step  31450/36621 | Loss: 3.0330 | Avg: 3.0380 | LR: 4.36e-05 | 1.12 steps/sec
+  Step  31500/36621 | Loss: 2.9707 | Avg: 2.9839 | LR: 4.31e-05 | 1.12 steps/sec
+  Step  31550/36621 | Loss: 3.1058 | Avg: 3.0612 | LR: 4.27e-05 | 1.12 steps/sec
+  Step  31600/36621 | Loss: 3.1640 | Avg: 3.0614 | LR: 4.23e-05 | 1.12 steps/sec
+  Step  31650/36621 | Loss: 2.7932 | Avg: 3.0834 | LR: 4.19e-05 | 1.12 steps/sec
+  Step  31700/36621 | Loss: 3.2239 | Avg: 3.0352 | LR: 4.14e-05 | 1.12 steps/sec
+  Step  31750/36621 | Loss: 3.2050 | Avg: 3.0058 | LR: 4.10e-05 | 1.12 steps/sec
+  Step  31800/36621 | Loss: 3.0782 | Avg: 3.0391 | LR: 4.06e-05 | 1.12 steps/sec
+  Step  31850/36621 | Loss: 3.0132 | Avg: 3.0834 | LR: 4.02e-05 | 1.12 steps/sec
+  Step  31900/36621 | Loss: 3.0883 | Avg: 3.0459 | LR: 3.98e-05 | 1.12 steps/sec
+  Step  31950/36621 | Loss: 3.1072 | Avg: 2.9846 | LR: 3.93e-05 | 1.12 steps/sec
+  Step  32000/36621 | Loss: 3.1818 | Avg: 3.0623 | LR: 3.89e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 21.17
+
+
+  Generating samples...
+
+  [Sample 1]  from the game . Players can make up more than one other player 's statistics after playing the game . For example , the game 's score is 1 @.@ 2 . While the game features several types of items , pla...
+
+  [Sample 2]  for the next two years . The practice of the " third toe " has served to improve the severity of the injury . At the time of the 1960s , the practice also featured a large @-@ scale operation to mini...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_32000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_28000.pt
+  Step  32050/36621 | Loss: 2.9824 | Avg: 3.0599 | LR: 3.85e-05 | 1.12 steps/sec
+  Step  32100/36621 | Loss: 3.4257 | Avg: 3.1318 | LR: 3.81e-05 | 1.12 steps/sec
+  Step  32150/36621 | Loss: 3.2143 | Avg: 3.0998 | LR: 3.77e-05 | 1.12 steps/sec
+  Step  32200/36621 | Loss: 3.1378 | Avg: 2.9835 | LR: 3.72e-05 | 1.12 steps/sec
+  Step  32250/36621 | Loss: 2.7358 | Avg: 3.0427 | LR: 3.68e-05 | 1.12 steps/sec
+  Step  32300/36621 | Loss: 3.3125 | Avg: 3.0426 | LR: 3.64e-05 | 1.12 steps/sec
+  Step  32350/36621 | Loss: 2.5356 | Avg: 3.0671 | LR: 3.60e-05 | 1.12 steps/sec
+  Step  32400/36621 | Loss: 3.3745 | Avg: 3.0452 | LR: 3.55e-05 | 1.12 steps/sec
+  Step  32450/36621 | Loss: 3.1809 | Avg: 2.9499 | LR: 3.51e-05 | 1.12 steps/sec
+  Step  32500/36621 | Loss: 3.0461 | Avg: 2.9457 | LR: 3.47e-05 | 1.12 steps/sec
+  Step  32550/36621 | Loss: 3.4833 | Avg: 3.0470 | LR: 3.43e-05 | 1.12 steps/sec
+  Step  32600/36621 | Loss: 2.8978 | Avg: 3.0592 | LR: 3.39e-05 | 1.12 steps/sec
+  Step  32650/36621 | Loss: 3.2238 | Avg: 3.0137 | LR: 3.34e-05 | 1.12 steps/sec
+  Step  32700/36621 | Loss: 3.0460 | Avg: 2.9807 | LR: 3.30e-05 | 1.12 steps/sec
+  Step  32750/36621 | Loss: 3.4696 | Avg: 2.9893 | LR: 3.26e-05 | 1.12 steps/sec
+  Step  32800/36621 | Loss: 3.1610 | Avg: 2.9712 | LR: 3.22e-05 | 1.12 steps/sec
+  Step  32850/36621 | Loss: 3.4717 | Avg: 3.0326 | LR: 3.18e-05 | 1.12 steps/sec
+  Step  32900/36621 | Loss: 3.0288 | Avg: 3.0546 | LR: 3.13e-05 | 1.12 steps/sec
+  Step  32950/36621 | Loss: 2.7140 | Avg: 2.9737 | LR: 3.09e-05 | 1.12 steps/sec
+  Step  33000/36621 | Loss: 3.1907 | Avg: 3.0926 | LR: 3.05e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 20.91
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_33000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_29000.pt
+  Step  33050/36621 | Loss: 2.7796 | Avg: 3.1263 | LR: 3.01e-05 | 1.12 steps/sec
+  Step  33100/36621 | Loss: 3.5968 | Avg: 3.0130 | LR: 2.97e-05 | 1.12 steps/sec
+  Step  33150/36621 | Loss: 3.3270 | Avg: 3.0569 | LR: 2.92e-05 | 1.12 steps/sec
+  Step  33200/36621 | Loss: 3.2646 | Avg: 3.0309 | LR: 2.88e-05 | 1.12 steps/sec
+  Step  33250/36621 | Loss: 3.0283 | Avg: 2.9973 | LR: 2.84e-05 | 1.12 steps/sec
+  Step  33300/36621 | Loss: 3.7140 | Avg: 3.0644 | LR: 2.80e-05 | 1.12 steps/sec
+  Step  33350/36621 | Loss: 2.9673 | Avg: 2.9921 | LR: 2.75e-05 | 1.12 steps/sec
+  Step  33400/36621 | Loss: 3.5442 | Avg: 3.0461 | LR: 2.71e-05 | 1.12 steps/sec
+  Step  33450/36621 | Loss: 2.8512 | Avg: 2.9858 | LR: 2.67e-05 | 1.12 steps/sec
+  Step  33500/36621 | Loss: 2.9456 | Avg: 2.9911 | LR: 2.63e-05 | 1.12 steps/sec
+  Step  33550/36621 | Loss: 3.1002 | Avg: 2.9997 | LR: 2.59e-05 | 1.12 steps/sec
+  Step  33600/36621 | Loss: 3.0558 | Avg: 3.0164 | LR: 2.54e-05 | 1.12 steps/sec
+  Step  33650/36621 | Loss: 2.8877 | Avg: 3.0168 | LR: 2.50e-05 | 1.12 steps/sec
+  Step  33700/36621 | Loss: 2.8586 | Avg: 3.0205 | LR: 2.46e-05 | 1.12 steps/sec
+  Step  33750/36621 | Loss: 2.9723 | Avg: 3.0157 | LR: 2.42e-05 | 1.12 steps/sec
+  Step  33800/36621 | Loss: 3.3435 | Avg: 3.0524 | LR: 2.38e-05 | 1.12 steps/sec
+  Step  33850/36621 | Loss: 3.2251 | Avg: 2.9091 | LR: 2.33e-05 | 1.12 steps/sec
+  Step  33900/36621 | Loss: 3.1189 | Avg: 3.0898 | LR: 2.29e-05 | 1.12 steps/sec
+  Step  33950/36621 | Loss: 3.1949 | Avg: 3.0379 | LR: 2.25e-05 | 1.12 steps/sec
+  Step  34000/36621 | Loss: 3.1674 | Avg: 2.9988 | LR: 2.21e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 20.75
+
+
+  Generating samples...
+
+  [Sample 1]  is one that is the opposite of the one that is the opposite of the one that is the opposite ( and other ) . 
+ There are many ways in which there is a different way of trying one 's attention . First ...
+
+  [Sample 2]  in the World War II . A key feature of the game is the ability to select an active opponent for a single game . 
+ = = Gameplay = = 
+ The game is a turn @-@ based strategy game where the player takes ...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_34000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_30000.pt
+  Step  34050/36621 | Loss: 2.8833 | Avg: 2.9930 | LR: 2.17e-05 | 1.12 steps/sec
+  Step  34100/36621 | Loss: 2.8779 | Avg: 2.9902 | LR: 2.12e-05 | 1.12 steps/sec
+  Step  34150/36621 | Loss: 2.8146 | Avg: 2.9564 | LR: 2.08e-05 | 1.12 steps/sec
+  Step  34200/36621 | Loss: 3.0671 | Avg: 3.0080 | LR: 2.04e-05 | 1.12 steps/sec
+  Step  34250/36621 | Loss: 2.4032 | Avg: 2.9613 | LR: 2.00e-05 | 1.12 steps/sec
+  Step  34300/36621 | Loss: 2.7572 | Avg: 2.9999 | LR: 1.95e-05 | 1.12 steps/sec
+  Step  34350/36621 | Loss: 2.9384 | Avg: 2.9646 | LR: 1.91e-05 | 1.12 steps/sec
+  Step  34400/36621 | Loss: 3.2690 | Avg: 3.0089 | LR: 1.87e-05 | 1.12 steps/sec
+  Step  34450/36621 | Loss: 3.2210 | Avg: 3.0188 | LR: 1.83e-05 | 1.12 steps/sec
+  Step  34500/36621 | Loss: 2.8262 | Avg: 2.9481 | LR: 1.79e-05 | 1.12 steps/sec
+  Step  34550/36621 | Loss: 2.8266 | Avg: 2.8526 | LR: 1.74e-05 | 1.12 steps/sec
+  Step  34600/36621 | Loss: 3.3741 | Avg: 3.0042 | LR: 1.70e-05 | 1.12 steps/sec
+  Step  34650/36621 | Loss: 3.0026 | Avg: 3.0280 | LR: 1.66e-05 | 1.12 steps/sec
+  Step  34700/36621 | Loss: 3.2596 | Avg: 2.9666 | LR: 1.62e-05 | 1.12 steps/sec
+  Step  34750/36621 | Loss: 3.0779 | Avg: 2.9781 | LR: 1.58e-05 | 1.12 steps/sec
+  Step  34800/36621 | Loss: 2.9280 | Avg: 2.9392 | LR: 1.53e-05 | 1.12 steps/sec
+  Step  34850/36621 | Loss: 3.4128 | Avg: 3.0898 | LR: 1.49e-05 | 1.12 steps/sec
+  Step  34900/36621 | Loss: 3.3269 | Avg: 3.0310 | LR: 1.45e-05 | 1.12 steps/sec
+  Step  34950/36621 | Loss: 3.0649 | Avg: 2.9969 | LR: 1.41e-05 | 1.12 steps/sec
+  Step  35000/36621 | Loss: 2.4602 | Avg: 3.0284 | LR: 1.37e-05 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 20.54
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_35000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_31000.pt
+  Step  35050/36621 | Loss: 3.1457 | Avg: 3.0081 | LR: 1.32e-05 | 1.12 steps/sec
+  Step  35100/36621 | Loss: 3.0451 | Avg: 2.9740 | LR: 1.28e-05 | 1.12 steps/sec
+  Step  35150/36621 | Loss: 2.9095 | Avg: 2.8972 | LR: 1.24e-05 | 1.12 steps/sec
+  Step  35200/36621 | Loss: 2.3609 | Avg: 2.9295 | LR: 1.20e-05 | 1.12 steps/sec
+  Step  35250/36621 | Loss: 2.7619 | Avg: 2.9847 | LR: 1.15e-05 | 1.12 steps/sec
+  Step  35300/36621 | Loss: 2.9183 | Avg: 2.9224 | LR: 1.11e-05 | 1.12 steps/sec
+  Step  35350/36621 | Loss: 2.7149 | Avg: 2.9743 | LR: 1.07e-05 | 1.12 steps/sec
+  Step  35400/36621 | Loss: 3.2047 | Avg: 3.0008 | LR: 1.03e-05 | 1.12 steps/sec
+  Step  35450/36621 | Loss: 2.7411 | Avg: 2.9599 | LR: 9.86e-06 | 1.12 steps/sec
+  Step  35500/36621 | Loss: 2.4620 | Avg: 2.9915 | LR: 9.44e-06 | 1.12 steps/sec
+  Step  35550/36621 | Loss: 2.3672 | Avg: 3.0632 | LR: 9.02e-06 | 1.12 steps/sec
+  Step  35600/36621 | Loss: 2.9273 | Avg: 2.9439 | LR: 8.60e-06 | 1.12 steps/sec
+  Step  35650/36621 | Loss: 3.1490 | Avg: 2.9585 | LR: 8.18e-06 | 1.12 steps/sec
+  Step  35700/36621 | Loss: 3.0694 | Avg: 2.9488 | LR: 7.76e-06 | 1.12 steps/sec
+  Step  35750/36621 | Loss: 2.9198 | Avg: 2.9248 | LR: 7.34e-06 | 1.12 steps/sec
+  Step  35800/36621 | Loss: 2.9761 | Avg: 2.9344 | LR: 6.91e-06 | 1.12 steps/sec
+  Step  35850/36621 | Loss: 2.8958 | Avg: 2.9512 | LR: 6.49e-06 | 1.12 steps/sec
+  Step  35900/36621 | Loss: 3.3668 | Avg: 3.0127 | LR: 6.07e-06 | 1.12 steps/sec
+  Step  35950/36621 | Loss: 3.3039 | Avg: 2.9917 | LR: 5.65e-06 | 1.12 steps/sec
+  Step  36000/36621 | Loss: 3.2090 | Avg: 2.9501 | LR: 5.23e-06 | 1.12 steps/sec
+
+  Computing validation perplexity...
+  Val Perplexity: 20.41
+
+
+  Generating samples...
+
+  [Sample 1]  at the time , and in later life the people of the United States put forth their own theories of the concept of a class of animals . 
+ In 1873 , the American zoologist Dr. John Barnard reported that a...
+
+  [Sample 2]  of the " class " , " race " , " class " and " race " . 
+ In the second and third interviews , Minogue was asked about the issue after she expressed regret , but noted , " a lot of things could come o...
+
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_36000.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_32000.pt
+  Step  36050/36621 | Loss: 3.2490 | Avg: 3.0115 | LR: 4.81e-06 | 1.12 steps/sec
+  Step  36100/36621 | Loss: 3.1847 | Avg: 3.0223 | LR: 4.39e-06 | 1.12 steps/sec
+  Step  36150/36621 | Loss: 2.8584 | Avg: 2.8883 | LR: 3.97e-06 | 1.12 steps/sec
+  Step  36200/36621 | Loss: 3.2472 | Avg: 3.0009 | LR: 3.55e-06 | 1.12 steps/sec
+  Step  36250/36621 | Loss: 2.5590 | Avg: 2.9432 | LR: 3.12e-06 | 1.12 steps/sec
+  Step  36300/36621 | Loss: 2.7301 | Avg: 2.9305 | LR: 2.70e-06 | 1.12 steps/sec
+  Step  36350/36621 | Loss: 2.9291 | Avg: 2.9618 | LR: 2.28e-06 | 1.12 steps/sec
+  Step  36400/36621 | Loss: 2.9596 | Avg: 2.9391 | LR: 1.86e-06 | 1.12 steps/sec
+  Step  36450/36621 | Loss: 3.1885 | Avg: 2.9372 | LR: 1.44e-06 | 1.12 steps/sec
+  Step  36500/36621 | Loss: 2.9666 | Avg: 2.9301 | LR: 1.02e-06 | 1.12 steps/sec
+  Step  36550/36621 | Loss: 2.7684 | Avg: 2.9383 | LR: 5.98e-07 | 1.12 steps/sec
+  Step  36600/36621 | Loss: 2.9168 | Avg: 2.9060 | LR: 1.77e-07 | 1.12 steps/sec
+  Checkpoint saved: /workspace/checkpoints/checkpoint_step_36621.pt
+
+  Removed old checkpoint (rotation): checkpoint_step_33000.pt
+
+============================================================
+TRAINING COMPLETE
+============================================================
+This run duration: 542.8 minutes
+Steps this run: 36621
+Total steps (cumulative): 36621
+
+============================================================
+TRAINING SUMMARY
+============================================================
+Final Train Loss:       2.906015
+Initial Train Loss:     10.390063
+Loss Reduction:         72.0%
+Log file:               logs/training_20260703_123001.json
+============================================================
+
+Final model saved: /workspace/checkpoints/final_model.pt
+

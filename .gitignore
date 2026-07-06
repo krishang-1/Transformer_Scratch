@@ -1,12 +1,20 @@
-gitignore_content = """checkpoints/
+# Model checkpoints and weights - too large for git, belong on Hugging Face
+*.pt
+checkpoints/
+
+# Training artifacts (raw logs excluded, but keep the summary plot)
 logs/
+
+# Python bytecode/cache
 __pycache__/
 *.pyc
 .cache/
+
+# CUDA compiled artifacts
 kernels/*.o
 kernels/*.so
 build/
-"""
 
-with open(".gitignore", "w") as f:
-    f.write(gitignore_content)
+# OS/editor junk
+.DS_Store
+Thumbs.db
