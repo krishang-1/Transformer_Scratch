@@ -2,8 +2,8 @@
 
 A decoder-only transformer built entirely from first principles in PyTorch — every component (embeddings, RoPE, multi-head attention, RMSNorm, SwiGLU, output projection) implemented and numerically verified against reference math, trained to convergence on real data, and accelerated with a hand-written, hand-derived CUDA attention kernel.
 
-**[Try the live demo →](#)** *[(Hugging Face Space link)](https://huggingface.co/spaces/krishang-raju/transformer-scratch-demo)*
-**[Model card →](#)** *[(Hugging Face model repo link](https://huggingface.co/krishang-raju/transformer-scratch-123M-wikitext))*
+**[Try the live demo →](#)** *[(Link!)](https://huggingface.co/spaces/krishang-raju/transformer-scratch-demo)*
+**[Model card →](#)** *[(Link!](https://huggingface.co/krishang-raju/transformer-scratch-123M-wikitext))*
 
 ---
 
